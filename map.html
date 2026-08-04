@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Схема метро — Смарагдовий Метрополітен</title>
+  <meta name="description" content="Інтерактивна схема Смарагдового метрополітену: 5 ліній, 50 станцій, пересадки. Натисніть на станцію, щоб дізнатися деталі.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Схема метро — Смарагдовий Метрополітен">
+  <meta property="og:description" content="Інтерактивна схема Смарагдового метрополітену: 5 ліній, 50 станцій, пересадки. Натисніть на станцію, щоб дізнатися деталі.">
+  <meta property="og:image" content="images/hero.jpg">
+  <meta property="og:site_name" content="Смарагдовий Метрополітен">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="page-progress" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="pixel-strip" aria-hidden="true"></div>
+    <div class="wrap">
+      <nav class="nav" aria-label="Головна навігація">
+        <a class="brand" href="index.html">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span class="brand__text">Смарагдовий<span>Метрополітен</span></span>
+        </a>
+        <button class="nav__burger" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="main-menu">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav__menu" id="main-menu">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="index.html">Головна</a></li>
+            <li><a class="nav__link" href="map.html">Схема метро</a></li>
+            <li><a class="nav__link" href="stations.html" data-match="station-">Станції</a></li>
+            <li><a class="nav__link" href="trains.html">Поїзди</a></li>
+            <li><a class="nav__link" href="news.html" data-match="news-">Новини</a></li>
+            <li><a class="nav__link" href="about.html">Про метро</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero">
+      <span class="page-hero__glow" aria-hidden="true"></span>
+      <div class="wrap">
+        <p class="breadcrumbs"><a href="index.html">Головна</a> → Схема метро</p>
+        <h1 class="reveal">Схема ліній</h1>
+        <p class="section__lead reveal" data-delay="1">П'ять ліній, 50 станцій та 9 пересадкових вузлів. Наведіть на станцію, щоб побачити деталі, або натисніть, щоб відкрити її сторінку.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="wrap">
+        <ul class="map-legend reveal">
+          <li><button type="button" class="line--red" data-line="red">М1 · Червона</button></li>
+          <li><button type="button" class="line--blue" data-line="blue">М2 · Синя</button></li>
+          <li><button type="button" class="line--green" data-line="green">М3 · Смарагдова</button></li>
+          <li><button type="button" class="line--yellow" data-line="yellow">М4 · Золота</button></li>
+          <li><button type="button" class="line--purple" data-line="purple">М5 · Аметистова</button></li>
+        </ul>
+        <div class="map-shell glass reveal" data-anim="zoom">
+          <div class="map-scroll">
+      <svg class="metro-map" viewBox="0 0 1000 720" role="img" aria-label="Схема ліній Смарагдового метрополітену">
+        <title>Схема ліній Смарагдового метрополітену</title>
+        <polyline class="map-line line--red" data-line="red" points="80,180 173,180 267,180 360,180 453,180 547,180 640,180 733,180 827,180 920,180" />
+        <polyline class="map-line line--blue" data-line="blue" points="80,520 173,520 267,520 360,520 453,520 547,520 640,520 733,520 827,520 920,520" />
+        <polyline class="map-line line--green" data-line="green" points="360,60 360,120 360,180 360,240 360,300 360,360 360,420 360,470 360,520 360,600" />
+        <polyline class="map-line line--yellow" data-line="yellow" points="733,80 733,140 733,180 733,250 733,320 733,390 733,450 733,520 733,580 733,650" />
+        <polyline class="map-line line--purple" data-line="purple" points="80,660 180,600 267,520 360,430 453,360 547,300 640,240 733,180 827,120 920,60" />
+        <a class="map-station line--red" data-line="red" data-name="Обсидіанова" data-line-name="Червона лінія" href="station-obsydianova.html" aria-label="Станція Обсидіанова, Червона лінія">
+          <circle cx="80" cy="180" r="6"></circle>
+          <text x="80" y="156" text-anchor="middle">Обсидіанова</text>
+        </a>
+        <a class="map-station line--red" data-line="red" data-name="Кам'яна" data-line-name="Червона лінія" href="station-kamyana.html" aria-label="Станція Кам'яна, Червона лінія">
+          <circle cx="173" cy="180" r="6"></circle>
+          <text x="173" y="214" text-anchor="middle">Кам'яна</text>
+        </a>
+        <a class="map-station line--red" data-line="red" data-name="Редстоун" data-line-name="Червона лінія" href="station-redstoun.html" aria-label="Станція Редстоун, Червона лінія">
+          <circle cx="267" cy="180" r="6"></circle>
+          <text x="267" y="156" text-anchor="middle">Редстоун</text>
+        </a>
+        <a class="map-station line--red map-station--transfer" data-line="red" data-name="Центральний Вокзал" data-line-name="Червона лінія" data-transfer="1" href="station-tsentralnyy-vokzal.html" aria-label="Станція Центральний Вокзал, Червона лінія">
+          <circle cx="360" cy="180" r="8"></circle>
+          <text x="360" y="214" text-anchor="middle">Центральний Вокзал</text>
+        </a>
+        <a class="map-station line--red" data-line="red" data-name="Крипер-Парк" data-line-name="Червона лінія" href="station-kryper-park.html" aria-label="Станція Крипер-Парк, Червона лінія">
+          <circle cx="453" cy="180" r="6"></circle>
+          <text x="453" y="156" text-anchor="middle">Крипер-Парк</text>
+        </a>
+        <a class="map-station line--red" data-line="red" data-name="Ковадло" data-line-name="Червона лінія" href="station-kovadlo.html" aria-label="Станція Ковадло, Червона лінія">
+          <circle cx="547" cy="180" r="6"></circle>
+          <text x="547" y="214" text-anchor="middle">Ковадло</text>
+        </a>
+        <a class="map-station line--red" data-line="red" data-name="Плавильня" data-line-name="Червона лінія" href="station-plavylnya.html" aria-label="Станція Плавильня, Червона лінія">
+          <circle cx="640" cy="180" r="6"></circle>
+          <text x="640" y="156" text-anchor="middle">Плавильня</text>
+        </a>
+        <a class="map-station line--red map-station--transfer" data-line="red" data-name="Незер Портал" data-line-name="Червона лінія" data-transfer="1" href="station-nezer-portal.html" aria-label="Станція Незер Портал, Червона лінія">
+          <circle cx="733" cy="180" r="8"></circle>
+          <text x="733" y="214" text-anchor="middle">Незер Портал</text>
+        </a>
+        <a class="map-station line--red" data-line="red" data-name="Магмова" data-line-name="Червона лінія" href="station-mahmova.html" aria-label="Станція Магмова, Червона лінія">
+          <circle cx="827" cy="180" r="6"></circle>
+          <text x="827" y="156" text-anchor="middle">Магмова</text>
+        </a>
+        <a class="map-station line--red" data-line="red" data-name="Бастіон" data-line-name="Червона лінія" href="station-bastion.html" aria-label="Станція Бастіон, Червона лінія">
+          <circle cx="920" cy="180" r="6"></circle>
+          <text x="920" y="214" text-anchor="middle">Бастіон</text>
+        </a>
+        <a class="map-station line--blue" data-line="blue" data-name="Крижаний Шпиль" data-line-name="Синя лінія" href="station-kryzhanyy-shpyl.html" aria-label="Станція Крижаний Шпиль, Синя лінія">
+          <circle cx="80" cy="520" r="6"></circle>
+          <text x="80" y="496" text-anchor="middle">Крижаний Шпиль</text>
+        </a>
+        <a class="map-station line--blue" data-line="blue" data-name="Порт Причал" data-line-name="Синя лінія" href="station-port-prychal.html" aria-label="Станція Порт Причал, Синя лінія">
+          <circle cx="173" cy="520" r="6"></circle>
+          <text x="173" y="554" text-anchor="middle">Порт Причал</text>
+        </a>
+        <a class="map-station line--blue map-station--transfer" data-line="blue" data-name="Глибока Затока" data-line-name="Синя лінія" data-transfer="1" href="station-hlyboka-zatoka.html" aria-label="Станція Глибока Затока, Синя лінія">
+          <circle cx="267" cy="520" r="8"></circle>
+          <text x="267" y="496" text-anchor="middle">Глибока Затока</text>
+        </a>
+        <a class="map-station line--blue map-station--transfer" data-line="blue" data-name="Тайгова Гавань" data-line-name="Синя лінія" data-transfer="1" href="station-tayhova-havan.html" aria-label="Станція Тайгова Гавань, Синя лінія">
+          <circle cx="360" cy="520" r="8"></circle>
+          <text x="360" y="554" text-anchor="middle">Тайгова Гавань</text>
+        </a>
+        <a class="map-station line--blue" data-line="blue" data-name="Коралова" data-line-name="Синя лінія" href="station-koralova.html" aria-label="Станція Коралова, Синя лінія">
+          <circle cx="453" cy="520" r="6"></circle>
+          <text x="453" y="496" text-anchor="middle">Коралова</text>
+        </a>
+        <a class="map-station line--blue" data-line="blue" data-name="Затонулий Корабель" data-line-name="Синя лінія" href="station-zatonulyy-korabel.html" aria-label="Станція Затонулий Корабель, Синя лінія">
+          <circle cx="547" cy="520" r="6"></circle>
+          <text x="547" y="554" text-anchor="middle">Затонулий Корабель</text>
+        </a>
+        <a class="map-station line--blue" data-line="blue" data-name="Аквамаринова" data-line-name="Синя лінія" href="station-akvamarynova.html" aria-label="Станція Аквамаринова, Синя лінія">
+          <circle cx="640" cy="520" r="6"></circle>
+          <text x="640" y="496" text-anchor="middle">Аквамаринова</text>
+        </a>
+        <a class="map-station line--blue map-station--transfer" data-line="blue" data-name="Прісноводна" data-line-name="Синя лінія" data-transfer="1" href="station-prisnovodna.html" aria-label="Станція Прісноводна, Синя лінія">
+          <circle cx="733" cy="520" r="8"></circle>
+          <text x="733" y="554" text-anchor="middle">Прісноводна</text>
+        </a>
+        <a class="map-station line--blue" data-line="blue" data-name="Річковий Вокзал" data-line-name="Синя лінія" href="station-richkovyy-vokzal.html" aria-label="Станція Річковий Вокзал, Синя лінія">
+          <circle cx="827" cy="520" r="6"></circle>
+          <text x="827" y="496" text-anchor="middle">Річковий Вокзал</text>
+        </a>
+        <a class="map-station line--blue" data-line="blue" data-name="Океанічний Монумент" data-line-name="Синя лінія" href="station-okeanichnyy-monument.html" aria-label="Станція Океанічний Монумент, Синя лінія">
+          <circle cx="920" cy="520" r="6"></circle>
+          <text x="920" y="554" text-anchor="middle">Океанічний Монумент</text>
+        </a>
+        <a class="map-station line--green" data-line="green" data-name="Соснова Верхівка" data-line-name="Смарагдова лінія" href="station-sosnova-verkhivka.html" aria-label="Станція Соснова Верхівка, Смарагдова лінія">
+          <circle cx="360" cy="60" r="6"></circle>
+          <text x="378" y="64" text-anchor="start">Соснова Верхівка</text>
+        </a>
+        <a class="map-station line--green" data-line="green" data-name="Пшеничне Поле" data-line-name="Смарагдова лінія" href="station-pshenychne-pole.html" aria-label="Станція Пшеничне Поле, Смарагдова лінія">
+          <circle cx="360" cy="120" r="6"></circle>
+          <text x="378" y="124" text-anchor="start">Пшеничне Поле</text>
+        </a>
+        <a class="map-station line--green map-station--transfer" data-line="green" data-name="Смарагдова Площа" data-line-name="Смарагдова лінія" data-transfer="1" href="station-smarahdova-ploshcha.html" aria-label="Станція Смарагдова Площа, Смарагдова лінія">
+          <circle cx="373" cy="180" r="8"></circle>
+          <text x="391" y="184" text-anchor="start">Смарагдова Площа</text>
+        </a>
+        <a class="map-station line--green" data-line="green" data-name="Лісова" data-line-name="Смарагдова лінія" href="station-lisova.html" aria-label="Станція Лісова, Смарагдова лінія">
+          <circle cx="360" cy="240" r="6"></circle>
+          <text x="378" y="244" text-anchor="start">Лісова</text>
+        </a>
+        <a class="map-station line--green" data-line="green" data-name="Джунглі" data-line-name="Смарагдова лінія" href="station-dzhunhli.html" aria-label="Станція Джунглі, Смарагдова лінія">
+          <circle cx="360" cy="300" r="6"></circle>
+          <text x="378" y="304" text-anchor="start">Джунглі</text>
+        </a>
+        <a class="map-station line--green" data-line="green" data-name="Грибний Острів" data-line-name="Смарагдова лінія" href="station-hrybnyy-ostriv.html" aria-label="Станція Грибний Острів, Смарагдова лінія">
+          <circle cx="360" cy="360" r="6"></circle>
+          <text x="378" y="364" text-anchor="start">Грибний Острів</text>
+        </a>
+        <a class="map-station line--green" data-line="green" data-name="Бамбукова" data-line-name="Смарагдова лінія" href="station-bambukova.html" aria-label="Станція Бамбукова, Смарагдова лінія">
+          <circle cx="360" cy="420" r="6"></circle>
+          <text x="378" y="424" text-anchor="start">Бамбукова</text>
+        </a>
+        <a class="map-station line--green" data-line="green" data-name="Пасіка" data-line-name="Смарагдова лінія" href="station-pasika.html" aria-label="Станція Пасіка, Смарагдова лінія">
+          <circle cx="360" cy="470" r="6"></circle>
+          <text x="378" y="474" text-anchor="start">Пасіка</text>
+        </a>
+        <a class="map-station line--green map-station--transfer" data-line="green" data-name="Тайговий Міст" data-line-name="Смарагдова лінія" data-transfer="1" href="station-tayhovyy-mist.html" aria-label="Станція Тайговий Міст, Смарагдова лінія">
+          <circle cx="373" cy="520" r="8"></circle>
+          <text x="391" y="524" text-anchor="start">Тайговий Міст</text>
+        </a>
+        <a class="map-station line--green" data-line="green" data-name="Оранжерея" data-line-name="Смарагдова лінія" href="station-oranzhereya.html" aria-label="Станція Оранжерея, Смарагдова лінія">
+          <circle cx="360" cy="600" r="6"></circle>
+          <text x="378" y="604" text-anchor="start">Оранжерея</text>
+        </a>
+        <a class="map-station line--yellow" data-line="yellow" data-name="Золота Жила" data-line-name="Золота лінія" href="station-zolota-zhyla.html" aria-label="Станція Золота Жила, Золота лінія">
+          <circle cx="733" cy="80" r="6"></circle>
+          <text x="751" y="84" text-anchor="start">Золота Жила</text>
+        </a>
+        <a class="map-station line--yellow" data-line="yellow" data-name="Ливарня" data-line-name="Золота лінія" href="station-lyvarnya.html" aria-label="Станція Ливарня, Золота лінія">
+          <circle cx="733" cy="140" r="6"></circle>
+          <text x="751" y="144" text-anchor="start">Ливарня</text>
+        </a>
+        <a class="map-station line--yellow map-station--transfer" data-line="yellow" data-name="Незерська Брама" data-line-name="Золота лінія" data-transfer="1" href="station-nezerska-brama.html" aria-label="Станція Незерська Брама, Золота лінія">
+          <circle cx="746" cy="180" r="8"></circle>
+          <text x="764" y="184" text-anchor="start">Незерська Брама</text>
+        </a>
+        <a class="map-station line--yellow" data-line="yellow" data-name="Мідна" data-line-name="Золота лінія" href="station-midna.html" aria-label="Станція Мідна, Золота лінія">
+          <circle cx="733" cy="250" r="6"></circle>
+          <text x="751" y="254" text-anchor="start">Мідна</text>
+        </a>
+        <a class="map-station line--yellow" data-line="yellow" data-name="Шахтарська" data-line-name="Золота лінія" href="station-shakhtarska.html" aria-label="Станція Шахтарська, Золота лінія">
+          <circle cx="733" cy="320" r="6"></circle>
+          <text x="751" y="324" text-anchor="start">Шахтарська</text>
+        </a>
+        <a class="map-station line--yellow" data-line="yellow" data-name="Глибока Шахта" data-line-name="Золота лінія" href="station-hlyboka-shakhta.html" aria-label="Станція Глибока Шахта, Золота лінія">
+          <circle cx="733" cy="390" r="6"></circle>
+          <text x="751" y="394" text-anchor="start">Глибока Шахта</text>
+        </a>
+        <a class="map-station line--yellow" data-line="yellow" data-name="Алмазна" data-line-name="Золота лінія" href="station-almazna.html" aria-label="Станція Алмазна, Золота лінія">
+          <circle cx="733" cy="450" r="6"></circle>
+          <text x="751" y="454" text-anchor="start">Алмазна</text>
+        </a>
+        <a class="map-station line--yellow map-station--transfer" data-line="yellow" data-name="Портова Золота" data-line-name="Золота лінія" data-transfer="1" href="station-portova-zolota.html" aria-label="Станція Портова Золота, Золота лінія">
+          <circle cx="746" cy="520" r="8"></circle>
+          <text x="764" y="524" text-anchor="start">Портова Золота</text>
+        </a>
+        <a class="map-station line--yellow" data-line="yellow" data-name="Маяк" data-line-name="Золота лінія" href="station-mayak.html" aria-label="Станція Маяк, Золота лінія">
+          <circle cx="733" cy="580" r="6"></circle>
+          <text x="751" y="584" text-anchor="start">Маяк</text>
+        </a>
+        <a class="map-station line--yellow" data-line="yellow" data-name="Сонячна Долина" data-line-name="Золота лінія" href="station-sonyachna-dolyna.html" aria-label="Станція Сонячна Долина, Золота лінія">
+          <circle cx="733" cy="650" r="6"></circle>
+          <text x="751" y="654" text-anchor="start">Сонячна Долина</text>
+        </a>
+        <a class="map-station line--purple" data-line="purple" data-name="Аметистова Гео" data-line-name="Аметистова лінія" href="station-ametystova-heo.html" aria-label="Станція Аметистова Гео, Аметистова лінія">
+          <circle cx="80" cy="660" r="6"></circle>
+          <text x="98" y="664" text-anchor="start">Аметистова Гео</text>
+        </a>
+        <a class="map-station line--purple" data-line="purple" data-name="Друзова" data-line-name="Аметистова лінія" href="station-druzova.html" aria-label="Станція Друзова, Аметистова лінія">
+          <circle cx="180" cy="600" r="6"></circle>
+          <text x="198" y="604" text-anchor="start">Друзова</text>
+        </a>
+        <a class="map-station line--purple map-station--transfer" data-line="purple" data-name="Глибинна Затока" data-line-name="Аметистова лінія" data-transfer="1" href="station-hlybynna-zatoka.html" aria-label="Станція Глибинна Затока, Аметистова лінія">
+          <circle cx="280" cy="520" r="8"></circle>
+          <text x="298" y="524" text-anchor="start">Глибинна Затока</text>
+        </a>
+        <a class="map-station line--purple" data-line="purple" data-name="Ехо-Шард" data-line-name="Аметистова лінія" href="station-ekho-shard.html" aria-label="Станція Ехо-Шард, Аметистова лінія">
+          <circle cx="360" cy="430" r="6"></circle>
+          <text x="378" y="434" text-anchor="start">Ехо-Шард</text>
+        </a>
+        <a class="map-station line--purple" data-line="purple" data-name="Скалк-Сад" data-line-name="Аметистова лінія" href="station-skalk-sad.html" aria-label="Станція Скалк-Сад, Аметистова лінія">
+          <circle cx="453" cy="360" r="6"></circle>
+          <text x="471" y="364" text-anchor="start">Скалк-Сад</text>
+        </a>
+        <a class="map-station line--purple" data-line="purple" data-name="Стародавнє Місто" data-line-name="Аметистова лінія" href="station-starodavnye-misto.html" aria-label="Станція Стародавнє Місто, Аметистова лінія">
+          <circle cx="547" cy="300" r="6"></circle>
+          <text x="565" y="304" text-anchor="start">Стародавнє Місто</text>
+        </a>
+        <a class="map-station line--purple" data-line="purple" data-name="Ворота Вардена" data-line-name="Аметистова лінія" href="station-vorota-vardena.html" aria-label="Станція Ворота Вардена, Аметистова лінія">
+          <circle cx="640" cy="240" r="6"></circle>
+          <text x="658" y="244" text-anchor="start">Ворота Вардена</text>
+        </a>
+        <a class="map-station line--purple map-station--transfer" data-line="purple" data-name="Порталова Площа" data-line-name="Аметистова лінія" data-transfer="1" href="station-portalova-ploshcha.html" aria-label="Станція Порталова Площа, Аметистова лінія">
+          <circle cx="746" cy="180" r="8"></circle>
+          <text x="764" y="184" text-anchor="start">Порталова Площа</text>
+        </a>
+        <a class="map-station line--purple" data-line="purple" data-name="Ендер-Око" data-line-name="Аметистова лінія" href="station-ender-oko.html" aria-label="Станція Ендер-Око, Аметистова лінія">
+          <circle cx="827" cy="120" r="6"></circle>
+          <text x="845" y="124" text-anchor="start">Ендер-Око</text>
+        </a>
+        <a class="map-station line--purple" data-line="purple" data-name="Край" data-line-name="Аметистова лінія" href="station-kray.html" aria-label="Станція Край, Аметистова лінія">
+          <circle cx="920" cy="60" r="6"></circle>
+          <text x="938" y="64" text-anchor="start">Край</text>
+        </a>
+      </svg>
+          </div>
+        </div>
+        <p class="card__meta reveal" data-delay="2">Білі кружечки — пересадкові станції. Схема прокручується горизонтально на малих екранах.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="lines-list">
+      <div class="wrap">
+        <h2 id="lines-list" class="reveal">Станції за лініями</h2>
+        <div class="grid grid--3">
+          <article class="card glass reveal" data-delay="0">
+            <div class="card__body">
+              <span class="line-badge line--red"><i></i>М1 · Червона</span>
+              <h3 class="card__title">Червона лінія</h3>
+              <ul class="footer__list">
+                <li><a href="station-obsydianova.html">Обсидіанова</a></li>
+                <li><a href="station-kamyana.html">Кам'яна</a></li>
+                <li><a href="station-redstoun.html">Редстоун</a></li>
+                <li><a href="station-tsentralnyy-vokzal.html">Центральний Вокзал ⇄</a></li>
+                <li><a href="station-kryper-park.html">Крипер-Парк</a></li>
+                <li><a href="station-kovadlo.html">Ковадло</a></li>
+                <li><a href="station-plavylnya.html">Плавильня</a></li>
+                <li><a href="station-nezer-portal.html">Незер Портал ⇄</a></li>
+                <li><a href="station-mahmova.html">Магмова</a></li>
+                <li><a href="station-bastion.html">Бастіон</a></li>
+              </ul>
+            </div>
+          </article>
+          <article class="card glass reveal" data-delay="1">
+            <div class="card__body">
+              <span class="line-badge line--blue"><i></i>М2 · Синя</span>
+              <h3 class="card__title">Синя лінія</h3>
+              <ul class="footer__list">
+                <li><a href="station-kryzhanyy-shpyl.html">Крижаний Шпиль</a></li>
+                <li><a href="station-port-prychal.html">Порт Причал</a></li>
+                <li><a href="station-hlyboka-zatoka.html">Глибока Затока ⇄</a></li>
+                <li><a href="station-tayhova-havan.html">Тайгова Гавань ⇄</a></li>
+                <li><a href="station-koralova.html">Коралова</a></li>
+                <li><a href="station-zatonulyy-korabel.html">Затонулий Корабель</a></li>
+                <li><a href="station-akvamarynova.html">Аквамаринова</a></li>
+                <li><a href="station-prisnovodna.html">Прісноводна ⇄</a></li>
+                <li><a href="station-richkovyy-vokzal.html">Річковий Вокзал</a></li>
+                <li><a href="station-okeanichnyy-monument.html">Океанічний Монумент</a></li>
+              </ul>
+            </div>
+          </article>
+          <article class="card glass reveal" data-delay="2">
+            <div class="card__body">
+              <span class="line-badge line--green"><i></i>М3 · Смарагдова</span>
+              <h3 class="card__title">Смарагдова лінія</h3>
+              <ul class="footer__list">
+                <li><a href="station-sosnova-verkhivka.html">Соснова Верхівка</a></li>
+                <li><a href="station-pshenychne-pole.html">Пшеничне Поле</a></li>
+                <li><a href="station-smarahdova-ploshcha.html">Смарагдова Площа ⇄</a></li>
+                <li><a href="station-lisova.html">Лісова</a></li>
+                <li><a href="station-dzhunhli.html">Джунглі</a></li>
+                <li><a href="station-hrybnyy-ostriv.html">Грибний Острів</a></li>
+                <li><a href="station-bambukova.html">Бамбукова</a></li>
+                <li><a href="station-pasika.html">Пасіка</a></li>
+                <li><a href="station-tayhovyy-mist.html">Тайговий Міст ⇄</a></li>
+                <li><a href="station-oranzhereya.html">Оранжерея</a></li>
+              </ul>
+            </div>
+          </article>
+          <article class="card glass reveal" data-delay="3">
+            <div class="card__body">
+              <span class="line-badge line--yellow"><i></i>М4 · Золота</span>
+              <h3 class="card__title">Золота лінія</h3>
+              <ul class="footer__list">
+                <li><a href="station-zolota-zhyla.html">Золота Жила</a></li>
+                <li><a href="station-lyvarnya.html">Ливарня</a></li>
+                <li><a href="station-nezerska-brama.html">Незерська Брама ⇄</a></li>
+                <li><a href="station-midna.html">Мідна</a></li>
+                <li><a href="station-shakhtarska.html">Шахтарська</a></li>
+                <li><a href="station-hlyboka-shakhta.html">Глибока Шахта</a></li>
+                <li><a href="station-almazna.html">Алмазна</a></li>
+                <li><a href="station-portova-zolota.html">Портова Золота ⇄</a></li>
+                <li><a href="station-mayak.html">Маяк</a></li>
+                <li><a href="station-sonyachna-dolyna.html">Сонячна Долина</a></li>
+              </ul>
+            </div>
+          </article>
+          <article class="card glass reveal" data-delay="4">
+            <div class="card__body">
+              <span class="line-badge line--purple"><i></i>М5 · Аметистова</span>
+              <h3 class="card__title">Аметистова лінія</h3>
+              <ul class="footer__list">
+                <li><a href="station-ametystova-heo.html">Аметистова Гео</a></li>
+                <li><a href="station-druzova.html">Друзова</a></li>
+                <li><a href="station-hlybynna-zatoka.html">Глибинна Затока ⇄</a></li>
+                <li><a href="station-ekho-shard.html">Ехо-Шард</a></li>
+                <li><a href="station-skalk-sad.html">Скалк-Сад</a></li>
+                <li><a href="station-starodavnye-misto.html">Стародавнє Місто</a></li>
+                <li><a href="station-vorota-vardena.html">Ворота Вардена</a></li>
+                <li><a href="station-portalova-ploshcha.html">Порталова Площа ⇄</a></li>
+                <li><a href="station-ender-oko.html">Ендер-Око</a></li>
+                <li><a href="station-kray.html">Край</a></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <a class="brand" href="index.html">
+            <span class="brand__mark" aria-hidden="true"></span>
+            <span class="brand__text">Смарагдовий<span>Метрополітен</span></span>
+          </a>
+          <p class="card__text" >Підземна транспортна мережа, побудована блок за блоком у світі Minecraft.</p>
+        </div>
+        <div>
+          <h2 class="footer__title">Навігація</h2>
+          <ul class="footer__list">
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="map.html">Схема метро</a></li>
+            <li><a href="stations.html">Станції</a></li>
+            <li><a href="trains.html">Поїзди</a></li>
+            <li><a href="news.html">Новини</a></li>
+            <li><a href="about.html">Про метро</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer__title">Лінії</h2>
+          <ul class="footer__list">
+            <li><a href="map.html">М1 · Червона лінія</a></li>
+            <li><a href="map.html">М2 · Синя лінія</a></li>
+            <li><a href="map.html">М3 · Смарагдова лінія</a></li>
+            <li><a href="map.html">М4 · Золота лінія</a></li>
+            <li><a href="map.html">М5 · Аметистова лінія</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span data-current-year>2026</span> Смарагдовий Метрополітен. Вигаданий проєкт у світі Minecraft.</p>
+        <p>Побудовано з <span aria-hidden="true">▣</span> 4 820 000 блоків</p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Повернутися нагору">↑</button>
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/map.js"></script>
+</body>
+</html>

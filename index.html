@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Смарагдовий Метрополітен — метро світу Minecraft</title>
+  <meta name="description" content="Офіційний портал вигаданого Смарагдового метрополітену у світі Minecraft: схема з 5 ліній, 50 станцій, поїзди, новини та історія мережі.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Смарагдовий Метрополітен — метро світу Minecraft">
+  <meta property="og:description" content="Офіційний портал вигаданого Смарагдового метрополітену у світі Minecraft: схема з 5 ліній, 50 станцій, поїзди, новини та історія мережі.">
+  <meta property="og:image" content="images/hero.jpg">
+  <meta property="og:site_name" content="Смарагдовий Метрополітен">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="page-progress" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="pixel-strip" aria-hidden="true"></div>
+    <div class="wrap">
+      <nav class="nav" aria-label="Головна навігація">
+        <a class="brand" href="index.html">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span class="brand__text">Смарагдовий<span>Метрополітен</span></span>
+        </a>
+        <button class="nav__burger" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="main-menu">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav__menu" id="main-menu">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="index.html">Головна</a></li>
+            <li><a class="nav__link" href="map.html">Схема метро</a></li>
+            <li><a class="nav__link" href="stations.html" data-match="station-">Станції</a></li>
+            <li><a class="nav__link" href="trains.html">Поїзди</a></li>
+            <li><a class="nav__link" href="news.html" data-match="news-">Новини</a></li>
+            <li><a class="nav__link" href="about.html">Про метро</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero__media">
+        <img src="images/hero.jpg" alt="Підземна станція Смарагдового метрополітену у стилі Minecraft" width="1920" height="1088">
+      </div>
+      <span class="hero-train" aria-hidden="true"></span>
+      <div class="wrap">
+        <div class="hero__inner">
+          <p class="hero__tag">Мережа з 5 ліній · 50 станцій</p>
+          <h1 class="hero__title">Смарагдовий <em>Метрополітен</em></h1>
+          <p class="hero__text">Підземна транспортна мережа, побудована блок за блоком у світі Minecraft. Швидко, безпечно й точно за розкладом — від Обсидіанової до станції «Край».</p>
+          <div class="hero__actions">
+            <a class="btn" href="map.html">Схема метро</a>
+            <a class="btn btn--ghost" href="stations.html">Станції</a>
+          </div>
+          <div class="hero__lines" aria-hidden="true">
+            <i class="line--red"></i>
+            <i class="line--blue"></i>
+            <i class="line--green"></i>
+            <i class="line--yellow"></i>
+            <i class="line--purple"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="stats" aria-labelledby="stats-title">
+      <div class="wrap">
+        <span class="section__label reveal">Метрополітен у цифрах</span>
+        <h2 id="stats-title" class="reveal">Мережа сьогодні</h2>
+      <div class="stats">
+        <article class="stat glass reveal" data-delay="0">
+          <p class="stat__value"><span data-count="2019">0</span></p>
+          <p class="stat__label">Рік заснування</p>
+        </article>
+        <article class="stat glass reveal" data-delay="1">
+          <p class="stat__value"><span data-count="5">0</span></p>
+          <p class="stat__label">Ліній у мережі</p>
+        </article>
+        <article class="stat glass reveal" data-delay="2">
+          <p class="stat__value"><span data-count="50">0</span></p>
+          <p class="stat__label">Станцій</p>
+        </article>
+        <article class="stat glass reveal" data-delay="3">
+          <p class="stat__value"><span data-count="62">0</span></p>
+          <p class="stat__label">Тунелів</p>
+        </article>
+        <article class="stat glass reveal" data-delay="4">
+          <p class="stat__value"><span data-count="74.6" data-decimals="1">0</span></p>
+          <p class="stat__label">Км колій</p>
+        </article>
+        <article class="stat glass reveal" data-delay="5">
+          <p class="stat__value"><span data-count="4820000">0</span></p>
+          <p class="stat__label">Блоків використано</p>
+        </article>
+        <article class="stat glass reveal" data-delay="0">
+          <p class="stat__value"><span data-count="4">0</span></p>
+          <p class="stat__label">Депо</p>
+        </article>
+        <article class="stat glass reveal" data-delay="1">
+          <p class="stat__value"><span data-count="38">0</span></p>
+          <p class="stat__label">Поїздів</p>
+        </article>
+      </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="about-title">
+      <div class="wrap">
+        <div class="split">
+          <div>
+            <span class="section__label reveal" data-anim="right">Про метрополітен</span>
+            <h2 id="about-title" class="reveal" data-anim="right">Шість років під землею</h2>
+            <p class="section__lead reveal" data-anim="right" data-delay="1">Перша ділянка Червоної лінії відкрилася 1 березня 2019 року й налічувала лише чотири станції. Сьогодні мережа охоплює десять районів світу, чотири депо та 62 тунелі.</p>
+            <p class="section__lead reveal" data-anim="right" data-delay="2">Кожна станція будувалася вручну: від несучих арок із кам'яної цегли до світлових панелей зі світлокаменю. Ми зберігаємо єдиний стиль навігації, але кожна станція має власне архітектурне обличчя.</p>
+            <p class="reveal" data-anim="right" data-delay="3"><a class="btn btn--ghost" href="about.html">Історія метро</a></p>
+          </div>
+          <div class="reveal" data-anim="left" data-delay="2">
+            <img class="station-shot" src="images/station-tsentralnyy-vokzal.svg" alt="Пересадковий вузол «Центральний Вокзал» у стилі Minecraft" loading="lazy" width="800" height="500">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="lines-title">
+      <div class="wrap">
+        <span class="section__label reveal">Лінії</span>
+        <h2 id="lines-title" class="reveal">П'ять кольорових маршрутів</h2>
+        <div class="grid grid--3">
+          <article class="card glass reveal" data-delay="0">
+            <div class="card__body">
+              <span class="line-badge line--red"><i></i>М1 · Червона</span>
+              <h3 class="card__title">Червона лінія</h3>
+              <p class="card__meta">Відкрита у 2019 · 10 станцій</p>
+              <p class="card__text">Від «Обсидіанова» до «Бастіон».</p>
+              <p class="card__foot"><a class="btn btn--ghost btn--sm" href="map.html">На схемі</a></p>
+            </div>
+          </article>
+          <article class="card glass reveal" data-delay="1">
+            <div class="card__body">
+              <span class="line-badge line--blue"><i></i>М2 · Синя</span>
+              <h3 class="card__title">Синя лінія</h3>
+              <p class="card__meta">Відкрита у 2020 · 10 станцій</p>
+              <p class="card__text">Від «Крижаний Шпиль» до «Океанічний Монумент».</p>
+              <p class="card__foot"><a class="btn btn--ghost btn--sm" href="map.html">На схемі</a></p>
+            </div>
+          </article>
+          <article class="card glass reveal" data-delay="2">
+            <div class="card__body">
+              <span class="line-badge line--green"><i></i>М3 · Смарагдова</span>
+              <h3 class="card__title">Смарагдова лінія</h3>
+              <p class="card__meta">Відкрита у 2021 · 10 станцій</p>
+              <p class="card__text">Від «Соснова Верхівка» до «Оранжерея».</p>
+              <p class="card__foot"><a class="btn btn--ghost btn--sm" href="map.html">На схемі</a></p>
+            </div>
+          </article>
+          <article class="card glass reveal" data-delay="3">
+            <div class="card__body">
+              <span class="line-badge line--yellow"><i></i>М4 · Золота</span>
+              <h3 class="card__title">Золота лінія</h3>
+              <p class="card__meta">Відкрита у 2023 · 10 станцій</p>
+              <p class="card__text">Від «Золота Жила» до «Сонячна Долина».</p>
+              <p class="card__foot"><a class="btn btn--ghost btn--sm" href="map.html">На схемі</a></p>
+            </div>
+          </article>
+          <article class="card glass reveal" data-delay="4">
+            <div class="card__body">
+              <span class="line-badge line--purple"><i></i>М5 · Аметистова</span>
+              <h3 class="card__title">Аметистова лінія</h3>
+              <p class="card__meta">Відкрита у 2024 · 10 станцій</p>
+              <p class="card__text">Від «Аметистова Гео» до «Край».</p>
+              <p class="card__foot"><a class="btn btn--ghost btn--sm" href="map.html">На схемі</a></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="news-title">
+      <div class="wrap">
+        <span class="section__label reveal">Новини</span>
+        <h2 id="news-title" class="reveal">Останні події мережі</h2>
+        <div class="grid grid--3">
+          <article class="card glass reveal" data-anim="zoom" data-delay="0">
+            <div class="card__media">
+              <img src="images/news-vidkryttia-stantsii-ekho-shard.svg" alt="Відкрито станцію «Ехо-Шард»" loading="lazy" width="800" height="500">
+              <div class="card__overlay"><span class="btn btn--sm">Читати</span></div>
+            </div>
+            <div class="card__body">
+              <p class="card__meta">18.07.2026 · Станції</p>
+              <h3 class="card__title"><a href="news-vidkryttia-stantsii-ekho-shard.html">Відкрито станцію «Ехо-Шард»</a></h3>
+              <p class="card__text">Аметистова лінія отримала четверту станцію з унікальним скалк-склепінням та звуковою навігацією.</p>
+              <p class="card__foot"><a class="btn btn--ghost btn--sm" href="news-vidkryttia-stantsii-ekho-shard.html">Читати</a></p>
+            </div>
+          </article>
+          <article class="card glass reveal" data-anim="zoom" data-delay="1">
+            <div class="card__media">
+              <img src="images/news-zapusk-potiaha-ekho-shard.svg" alt="На лінію вийшов потяг «Ехо-Шард»" loading="lazy" width="800" height="500">
+              <div class="card__overlay"><span class="btn btn--sm">Читати</span></div>
+            </div>
+            <div class="card__body">
+              <p class="card__meta">02.06.2026 · Поїзди</p>
+              <h3 class="card__title"><a href="news-zapusk-potiaha-ekho-shard.html">На лінію вийшов потяг «Ехо-Шард»</a></h3>
+              <p class="card__text">Найшвидший склад мережі розганяється до 78 блоків за секунду та має скалк-систему гальмування.</p>
+              <p class="card__foot"><a class="btn btn--ghost btn--sm" href="news-zapusk-potiaha-ekho-shard.html">Читати</a></p>
+            </div>
+          </article>
+          <article class="card glass reveal" data-anim="zoom" data-delay="2">
+            <div class="card__media">
+              <img src="images/news-vidkryttia-ametystovoi-linii.svg" alt="Аметистова лінія повністю введена в експлуатацію" loading="lazy" width="800" height="500">
+              <div class="card__overlay"><span class="btn btn--sm">Читати</span></div>
+            </div>
+            <div class="card__body">
+              <p class="card__meta">09.11.2025 · Лінії</p>
+              <h3 class="card__title"><a href="news-vidkryttia-ametystovoi-linii.html">Аметистова лінія повністю введена в експлуатацію</a></h3>
+              <p class="card__text">П'ята лінія метрополітену з'єднала Стародавнє Місто з Краєм і додала три пересадкові вузли.</p>
+              <p class="card__foot"><a class="btn btn--ghost btn--sm" href="news-vidkryttia-ametystovoi-linii.html">Читати</a></p>
+            </div>
+          </article>
+        </div>
+        <p class="reveal"><a class="btn btn--ghost" href="news.html">Усі новини</a></p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <a class="brand" href="index.html">
+            <span class="brand__mark" aria-hidden="true"></span>
+            <span class="brand__text">Смарагдовий<span>Метрополітен</span></span>
+          </a>
+          <p class="card__text" >Підземна транспортна мережа, побудована блок за блоком у світі Minecraft.</p>
+        </div>
+        <div>
+          <h2 class="footer__title">Навігація</h2>
+          <ul class="footer__list">
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="map.html">Схема метро</a></li>
+            <li><a href="stations.html">Станції</a></li>
+            <li><a href="trains.html">Поїзди</a></li>
+            <li><a href="news.html">Новини</a></li>
+            <li><a href="about.html">Про метро</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer__title">Лінії</h2>
+          <ul class="footer__list">
+            <li><a href="map.html">М1 · Червона лінія</a></li>
+            <li><a href="map.html">М2 · Синя лінія</a></li>
+            <li><a href="map.html">М3 · Смарагдова лінія</a></li>
+            <li><a href="map.html">М4 · Золота лінія</a></li>
+            <li><a href="map.html">М5 · Аметистова лінія</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span data-current-year>2026</span> Смарагдовий Метрополітен. Вигаданий проєкт у світі Minecraft.</p>
+        <p>Побудовано з <span aria-hidden="true">▣</span> 4 820 000 блоків</p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Повернутися нагору">↑</button>
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

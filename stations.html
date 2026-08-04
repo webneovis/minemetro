@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Станції — Смарагдовий Метрополітен</title>
+  <meta name="description" content="Фотогалерея всіх 50 станцій Смарагдового метрополітену з фільтром за лініями та пошуком.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Станції — Смарагдовий Метрополітен">
+  <meta property="og:description" content="Фотогалерея всіх 50 станцій Смарагдового метрополітену з фільтром за лініями та пошуком.">
+  <meta property="og:image" content="images/hero.jpg">
+  <meta property="og:site_name" content="Смарагдовий Метрополітен">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="page-progress" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="pixel-strip" aria-hidden="true"></div>
+    <div class="wrap">
+      <nav class="nav" aria-label="Головна навігація">
+        <a class="brand" href="index.html">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span class="brand__text">Смарагдовий<span>Метрополітен</span></span>
+        </a>
+        <button class="nav__burger" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="main-menu">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav__menu" id="main-menu">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="index.html">Головна</a></li>
+            <li><a class="nav__link" href="map.html">Схема метро</a></li>
+            <li><a class="nav__link" href="stations.html" data-match="station-">Станції</a></li>
+            <li><a class="nav__link" href="trains.html">Поїзди</a></li>
+            <li><a class="nav__link" href="news.html" data-match="news-">Новини</a></li>
+            <li><a class="nav__link" href="about.html">Про метро</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero">
+      <span class="page-hero__glow" aria-hidden="true"></span>
+      <div class="wrap">
+        <p class="breadcrumbs"><a href="index.html">Головна</a> → Станції</p>
+        <h1 class="reveal">Фотогалерея станцій</h1>
+        <p class="section__lead reveal" data-delay="1">Усі <span data-result-count>50</span> станцій мережі. Фільтруйте за лінією або шукайте станцію за назвою чи районом.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="wrap">
+        <div class="filters reveal">
+          <button type="button" class="is-active" data-filter="all">Усі лінії</button>
+          <button type="button" data-filter="red">М1 · Червона</button>
+          <button type="button" data-filter="blue">М2 · Синя</button>
+          <button type="button" data-filter="green">М3 · Смарагдова</button>
+          <button type="button" data-filter="yellow">М4 · Золота</button>
+          <button type="button" data-filter="purple">М5 · Аметистова</button>
+        </div>
+        <label class="visually-hidden" for="station-search"></label>
+        <input class="search-field reveal" id="station-search" type="search" placeholder="Пошук станції…" data-search aria-label="Пошук станції">
+        <div class="grid grid--3" data-gallery>
+        <article class="card glass reveal" data-anim="zoom" data-delay="0" data-filter-value="red" data-search-text="Обсидіанова Червона лінія Кам'яне Місто">
+          <div class="card__media">
+            <img src="images/station-obsydianova.svg" alt="Станція «Обсидіанова» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--red"><i></i>М1 · Червона</span>
+            <h3 class="card__title"><a href="station-obsydianova.html">Обсидіанова</a></h3>
+            <p class="card__meta">Відкрито: 05.02.2024</p>
+            <p class="card__text">Кам'яне Місто · наземна крита станція</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-obsydianova.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="1" data-filter-value="red" data-search-text="Кам'яна Червона лінія Гірський масив">
+          <div class="card__media">
+            <img src="images/station-kamyana.svg" alt="Станція «Кам'яна» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--red"><i></i>М1 · Червона</span>
+            <h3 class="card__title"><a href="station-kamyana.html">Кам'яна</a></h3>
+            <p class="card__meta">Відкрито: 13.10.2022</p>
+            <p class="card__text">Гірський масив · односклепінна станція мілкого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-kamyana.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="2" data-filter-value="red" data-search-text="Редстоун Червона лінія Верхній Спавн">
+          <div class="card__media">
+            <img src="images/station-redstoun.svg" alt="Станція «Редстоун» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--red"><i></i>М1 · Червона</span>
+            <h3 class="card__title"><a href="station-redstoun.html">Редстоун</a></h3>
+            <p class="card__meta">Відкрито: 06.08.2019</p>
+            <p class="card__text">Верхній Спавн · односклепінна станція мілкого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-redstoun.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="3" data-filter-value="red" data-search-text="Центральний Вокзал Червона лінія Старе Село">
+          <div class="card__media">
+            <img src="images/station-tsentralnyy-vokzal.svg" alt="Станція «Центральний Вокзал» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--red"><i></i>М1 · Червона</span>
+            <h3 class="card__title"><a href="station-tsentralnyy-vokzal.html">Центральний Вокзал</a></h3>
+            <p class="card__meta">Відкрито: 02.10.2019</p>
+            <p class="card__text">Старе Село · естакадна станція</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-tsentralnyy-vokzal.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="4" data-filter-value="red" data-search-text="Крипер-Парк Червона лінія Старе Село">
+          <div class="card__media">
+            <img src="images/station-kryper-park.svg" alt="Станція «Крипер-Парк» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--red"><i></i>М1 · Червона</span>
+            <h3 class="card__title"><a href="station-kryper-park.html">Крипер-Парк</a></h3>
+            <p class="card__meta">Відкрито: 04.11.2025</p>
+            <p class="card__text">Старе Село · односклепінна станція мілкого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-kryper-park.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="5" data-filter-value="red" data-search-text="Ковадло Червона лінія Лісопарк">
+          <div class="card__media">
+            <img src="images/station-kovadlo.svg" alt="Станція «Ковадло» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--red"><i></i>М1 · Червона</span>
+            <h3 class="card__title"><a href="station-kovadlo.html">Ковадло</a></h3>
+            <p class="card__meta">Відкрито: 11.11.2023</p>
+            <p class="card__text">Лісопарк · пілонна станція глибокого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-kovadlo.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="0" data-filter-value="red" data-search-text="Плавильня Червона лінія Долина Ріки">
+          <div class="card__media">
+            <img src="images/station-plavylnya.svg" alt="Станція «Плавильня» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--red"><i></i>М1 · Червона</span>
+            <h3 class="card__title"><a href="station-plavylnya.html">Плавильня</a></h3>
+            <p class="card__meta">Відкрито: 15.12.2023</p>
+            <p class="card__text">Долина Ріки · наземна крита станція</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-plavylnya.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="1" data-filter-value="red" data-search-text="Незер Портал Червона лінія Прибережний район">
+          <div class="card__media">
+            <img src="images/station-nezer-portal.svg" alt="Станція «Незер Портал» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--red"><i></i>М1 · Червона</span>
+            <h3 class="card__title"><a href="station-nezer-portal.html">Незер Портал</a></h3>
+            <p class="card__meta">Відкрито: 25.08.2020</p>
+            <p class="card__text">Прибережний район · односклепінна станція мілкого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-nezer-portal.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="2" data-filter-value="red" data-search-text="Магмова Червона лінія Лісопарк">
+          <div class="card__media">
+            <img src="images/station-mahmova.svg" alt="Станція «Магмова» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--red"><i></i>М1 · Червона</span>
+            <h3 class="card__title"><a href="station-mahmova.html">Магмова</a></h3>
+            <p class="card__meta">Відкрито: 17.12.2023</p>
+            <p class="card__text">Лісопарк · колонна станція глибокого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-mahmova.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="3" data-filter-value="red" data-search-text="Бастіон Червона лінія Лісопарк">
+          <div class="card__media">
+            <img src="images/station-bastion.svg" alt="Станція «Бастіон» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--red"><i></i>М1 · Червона</span>
+            <h3 class="card__title"><a href="station-bastion.html">Бастіон</a></h3>
+            <p class="card__meta">Відкрито: 12.03.2023</p>
+            <p class="card__text">Лісопарк · естакадна станція</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-bastion.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="4" data-filter-value="blue" data-search-text="Крижаний Шпиль Синя лінія Верхній Спавн">
+          <div class="card__media">
+            <img src="images/station-kryzhanyy-shpyl.svg" alt="Станція «Крижаний Шпиль» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--blue"><i></i>М2 · Синя</span>
+            <h3 class="card__title"><a href="station-kryzhanyy-shpyl.html">Крижаний Шпиль</a></h3>
+            <p class="card__meta">Відкрито: 27.10.2024</p>
+            <p class="card__text">Верхній Спавн · естакадна станція</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-kryzhanyy-shpyl.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="5" data-filter-value="blue" data-search-text="Порт Причал Синя лінія Лісопарк">
+          <div class="card__media">
+            <img src="images/station-port-prychal.svg" alt="Станція «Порт Причал» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--blue"><i></i>М2 · Синя</span>
+            <h3 class="card__title"><a href="station-port-prychal.html">Порт Причал</a></h3>
+            <p class="card__meta">Відкрито: 20.08.2024</p>
+            <p class="card__text">Лісопарк · односклепінна станція мілкого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-port-prychal.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="0" data-filter-value="blue" data-search-text="Глибока Затока Синя лінія Долина Ріки">
+          <div class="card__media">
+            <img src="images/station-hlyboka-zatoka.svg" alt="Станція «Глибока Затока» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--blue"><i></i>М2 · Синя</span>
+            <h3 class="card__title"><a href="station-hlyboka-zatoka.html">Глибока Затока</a></h3>
+            <p class="card__meta">Відкрито: 01.08.2019</p>
+            <p class="card__text">Долина Ріки · пілонна станція глибокого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-hlyboka-zatoka.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="1" data-filter-value="blue" data-search-text="Тайгова Гавань Синя лінія Кам'яне Місто">
+          <div class="card__media">
+            <img src="images/station-tayhova-havan.svg" alt="Станція «Тайгова Гавань» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--blue"><i></i>М2 · Синя</span>
+            <h3 class="card__title"><a href="station-tayhova-havan.html">Тайгова Гавань</a></h3>
+            <p class="card__meta">Відкрито: 24.12.2024</p>
+            <p class="card__text">Кам'яне Місто · односклепінна станція мілкого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-tayhova-havan.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="2" data-filter-value="blue" data-search-text="Коралова Синя лінія Лісопарк">
+          <div class="card__media">
+            <img src="images/station-koralova.svg" alt="Станція «Коралова» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--blue"><i></i>М2 · Синя</span>
+            <h3 class="card__title"><a href="station-koralova.html">Коралова</a></h3>
+            <p class="card__meta">Відкрито: 20.10.2022</p>
+            <p class="card__text">Лісопарк · наземна крита станція</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-koralova.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="3" data-filter-value="blue" data-search-text="Затонулий Корабель Синя лінія Шахтарський квартал">
+          <div class="card__media">
+            <img src="images/station-zatonulyy-korabel.svg" alt="Станція «Затонулий Корабель» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--blue"><i></i>М2 · Синя</span>
+            <h3 class="card__title"><a href="station-zatonulyy-korabel.html">Затонулий Корабель</a></h3>
+            <p class="card__meta">Відкрито: 23.02.2024</p>
+            <p class="card__text">Шахтарський квартал · естакадна станція</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-zatonulyy-korabel.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="4" data-filter-value="blue" data-search-text="Аквамаринова Синя лінія Долина Ріки">
+          <div class="card__media">
+            <img src="images/station-akvamarynova.svg" alt="Станція «Аквамаринова» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--blue"><i></i>М2 · Синя</span>
+            <h3 class="card__title"><a href="station-akvamarynova.html">Аквамаринова</a></h3>
+            <p class="card__meta">Відкрито: 18.03.2024</p>
+            <p class="card__text">Долина Ріки · односклепінна станція мілкого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-akvamarynova.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="5" data-filter-value="blue" data-search-text="Прісноводна Синя лінія Верхній Спавн">
+          <div class="card__media">
+            <img src="images/station-prisnovodna.svg" alt="Станція «Прісноводна» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--blue"><i></i>М2 · Синя</span>
+            <h3 class="card__title"><a href="station-prisnovodna.html">Прісноводна</a></h3>
+            <p class="card__meta">Відкрито: 03.08.2025</p>
+            <p class="card__text">Верхній Спавн · односклепінна станція мілкого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-prisnovodna.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="0" data-filter-value="blue" data-search-text="Річковий Вокзал Синя лінія Гірський масив">
+          <div class="card__media">
+            <img src="images/station-richkovyy-vokzal.svg" alt="Станція «Річковий Вокзал» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--blue"><i></i>М2 · Синя</span>
+            <h3 class="card__title"><a href="station-richkovyy-vokzal.html">Річковий Вокзал</a></h3>
+            <p class="card__meta">Відкрито: 27.07.2021</p>
+            <p class="card__text">Гірський масив · пілонна станція глибокого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-richkovyy-vokzal.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="1" data-filter-value="blue" data-search-text="Океанічний Монумент Синя лінія Шахтарський квартал">
+          <div class="card__media">
+            <img src="images/station-okeanichnyy-monument.svg" alt="Станція «Океанічний Монумент» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--blue"><i></i>М2 · Синя</span>
+            <h3 class="card__title"><a href="station-okeanichnyy-monument.html">Океанічний Монумент</a></h3>
+            <p class="card__meta">Відкрито: 02.08.2025</p>
+            <p class="card__text">Шахтарський квартал · пілонна станція глибокого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-okeanichnyy-monument.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="2" data-filter-value="green" data-search-text="Соснова Верхівка Смарагдова лінія Шахтарський квартал">
+          <div class="card__media">
+            <img src="images/station-sosnova-verkhivka.svg" alt="Станція «Соснова Верхівка» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--green"><i></i>М3 · Смарагдова</span>
+            <h3 class="card__title"><a href="station-sosnova-verkhivka.html">Соснова Верхівка</a></h3>
+            <p class="card__meta">Відкрито: 05.02.2024</p>
+            <p class="card__text">Шахтарський квартал · наземна крита станція</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-sosnova-verkhivka.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="3" data-filter-value="green" data-search-text="Пшеничне Поле Смарагдова лінія Прибережний район">
+          <div class="card__media">
+            <img src="images/station-pshenychne-pole.svg" alt="Станція «Пшеничне Поле» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--green"><i></i>М3 · Смарагдова</span>
+            <h3 class="card__title"><a href="station-pshenychne-pole.html">Пшеничне Поле</a></h3>
+            <p class="card__meta">Відкрито: 02.08.2023</p>
+            <p class="card__text">Прибережний район · колонна станція глибокого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-pshenychne-pole.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="4" data-filter-value="green" data-search-text="Смарагдова Площа Смарагдова лінія Гірський масив">
+          <div class="card__media">
+            <img src="images/station-smarahdova-ploshcha.svg" alt="Станція «Смарагдова Площа» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--green"><i></i>М3 · Смарагдова</span>
+            <h3 class="card__title"><a href="station-smarahdova-ploshcha.html">Смарагдова Площа</a></h3>
+            <p class="card__meta">Відкрито: 15.11.2025</p>
+            <p class="card__text">Гірський масив · наземна крита станція</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-smarahdova-ploshcha.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="5" data-filter-value="green" data-search-text="Лісова Смарагдова лінія Лісопарк">
+          <div class="card__media">
+            <img src="images/station-lisova.svg" alt="Станція «Лісова» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--green"><i></i>М3 · Смарагдова</span>
+            <h3 class="card__title"><a href="station-lisova.html">Лісова</a></h3>
+            <p class="card__meta">Відкрито: 16.01.2025</p>
+            <p class="card__text">Лісопарк · естакадна станція</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-lisova.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="0" data-filter-value="green" data-search-text="Джунглі Смарагдова лінія Верхній Спавн">
+          <div class="card__media">
+            <img src="images/station-dzhunhli.svg" alt="Станція «Джунглі» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--green"><i></i>М3 · Смарагдова</span>
+            <h3 class="card__title"><a href="station-dzhunhli.html">Джунглі</a></h3>
+            <p class="card__meta">Відкрито: 11.11.2019</p>
+            <p class="card__text">Верхній Спавн · пілонна станція глибокого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-dzhunhli.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="1" data-filter-value="green" data-search-text="Грибний Острів Смарагдова лінія Лісопарк">
+          <div class="card__media">
+            <img src="images/station-hrybnyy-ostriv.svg" alt="Станція «Грибний Острів» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--green"><i></i>М3 · Смарагдова</span>
+            <h3 class="card__title"><a href="station-hrybnyy-ostriv.html">Грибний Острів</a></h3>
+            <p class="card__meta">Відкрито: 05.09.2023</p>
+            <p class="card__text">Лісопарк · наземна крита станція</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-hrybnyy-ostriv.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="2" data-filter-value="green" data-search-text="Бамбукова Смарагдова лінія Долина Ріки">
+          <div class="card__media">
+            <img src="images/station-bambukova.svg" alt="Станція «Бамбукова» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--green"><i></i>М3 · Смарагдова</span>
+            <h3 class="card__title"><a href="station-bambukova.html">Бамбукова</a></h3>
+            <p class="card__meta">Відкрито: 26.04.2024</p>
+            <p class="card__text">Долина Ріки · односклепінна станція мілкого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-bambukova.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="3" data-filter-value="green" data-search-text="Пасіка Смарагдова лінія Прибережний район">
+          <div class="card__media">
+            <img src="images/station-pasika.svg" alt="Станція «Пасіка» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--green"><i></i>М3 · Смарагдова</span>
+            <h3 class="card__title"><a href="station-pasika.html">Пасіка</a></h3>
+            <p class="card__meta">Відкрито: 05.09.2023</p>
+            <p class="card__text">Прибережний район · пілонна станція глибокого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-pasika.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="4" data-filter-value="green" data-search-text="Тайговий Міст Смарагдова лінія Кам'яне Місто">
+          <div class="card__media">
+            <img src="images/station-tayhovyy-mist.svg" alt="Станція «Тайговий Міст» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--green"><i></i>М3 · Смарагдова</span>
+            <h3 class="card__title"><a href="station-tayhovyy-mist.html">Тайговий Міст</a></h3>
+            <p class="card__meta">Відкрито: 10.03.2024</p>
+            <p class="card__text">Кам'яне Місто · естакадна станція</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-tayhovyy-mist.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="5" data-filter-value="green" data-search-text="Оранжерея Смарагдова лінія Верхній Спавн">
+          <div class="card__media">
+            <img src="images/station-oranzhereya.svg" alt="Станція «Оранжерея» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--green"><i></i>М3 · Смарагдова</span>
+            <h3 class="card__title"><a href="station-oranzhereya.html">Оранжерея</a></h3>
+            <p class="card__meta">Відкрито: 25.01.2024</p>
+            <p class="card__text">Верхній Спавн · односклепінна станція мілкого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-oranzhereya.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="0" data-filter-value="yellow" data-search-text="Золота Жила Золота лінія Прибережний район">
+          <div class="card__media">
+            <img src="images/station-zolota-zhyla.svg" alt="Станція «Золота Жила» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--yellow"><i></i>М4 · Золота</span>
+            <h3 class="card__title"><a href="station-zolota-zhyla.html">Золота Жила</a></h3>
+            <p class="card__meta">Відкрито: 01.03.2020</p>
+            <p class="card__text">Прибережний район · естакадна станція</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-zolota-zhyla.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="1" data-filter-value="yellow" data-search-text="Ливарня Золота лінія Прибережний район">
+          <div class="card__media">
+            <img src="images/station-lyvarnya.svg" alt="Станція «Ливарня» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--yellow"><i></i>М4 · Золота</span>
+            <h3 class="card__title"><a href="station-lyvarnya.html">Ливарня</a></h3>
+            <p class="card__meta">Відкрито: 09.07.2019</p>
+            <p class="card__text">Прибережний район · колонна станція глибокого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-lyvarnya.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="2" data-filter-value="yellow" data-search-text="Незерська Брама Золота лінія Кам'яне Місто">
+          <div class="card__media">
+            <img src="images/station-nezerska-brama.svg" alt="Станція «Незерська Брама» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--yellow"><i></i>М4 · Золота</span>
+            <h3 class="card__title"><a href="station-nezerska-brama.html">Незерська Брама</a></h3>
+            <p class="card__meta">Відкрито: 08.09.2022</p>
+            <p class="card__text">Кам'яне Місто · пілонна станція глибокого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-nezerska-brama.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="3" data-filter-value="yellow" data-search-text="Мідна Золота лінія Лісопарк">
+          <div class="card__media">
+            <img src="images/station-midna.svg" alt="Станція «Мідна» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--yellow"><i></i>М4 · Золота</span>
+            <h3 class="card__title"><a href="station-midna.html">Мідна</a></h3>
+            <p class="card__meta">Відкрито: 06.05.2019</p>
+            <p class="card__text">Лісопарк · односклепінна станція мілкого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-midna.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="4" data-filter-value="yellow" data-search-text="Шахтарська Золота лінія Гірський масив">
+          <div class="card__media">
+            <img src="images/station-shakhtarska.svg" alt="Станція «Шахтарська» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--yellow"><i></i>М4 · Золота</span>
+            <h3 class="card__title"><a href="station-shakhtarska.html">Шахтарська</a></h3>
+            <p class="card__meta">Відкрито: 01.08.2019</p>
+            <p class="card__text">Гірський масив · односклепінна станція мілкого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-shakhtarska.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="5" data-filter-value="yellow" data-search-text="Глибока Шахта Золота лінія Долина Ріки">
+          <div class="card__media">
+            <img src="images/station-hlyboka-shakhta.svg" alt="Станція «Глибока Шахта» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--yellow"><i></i>М4 · Золота</span>
+            <h3 class="card__title"><a href="station-hlyboka-shakhta.html">Глибока Шахта</a></h3>
+            <p class="card__meta">Відкрито: 27.12.2025</p>
+            <p class="card__text">Долина Ріки · односклепінна станція мілкого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-hlyboka-shakhta.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="0" data-filter-value="yellow" data-search-text="Алмазна Золота лінія Старе Село">
+          <div class="card__media">
+            <img src="images/station-almazna.svg" alt="Станція «Алмазна» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--yellow"><i></i>М4 · Золота</span>
+            <h3 class="card__title"><a href="station-almazna.html">Алмазна</a></h3>
+            <p class="card__meta">Відкрито: 24.04.2019</p>
+            <p class="card__text">Старе Село · наземна крита станція</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-almazna.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="1" data-filter-value="yellow" data-search-text="Портова Золота Золота лінія Прибережний район">
+          <div class="card__media">
+            <img src="images/station-portova-zolota.svg" alt="Станція «Портова Золота» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--yellow"><i></i>М4 · Золота</span>
+            <h3 class="card__title"><a href="station-portova-zolota.html">Портова Золота</a></h3>
+            <p class="card__meta">Відкрито: 04.06.2019</p>
+            <p class="card__text">Прибережний район · естакадна станція</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-portova-zolota.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="2" data-filter-value="yellow" data-search-text="Маяк Золота лінія Крайня Пустка">
+          <div class="card__media">
+            <img src="images/station-mayak.svg" alt="Станція «Маяк» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--yellow"><i></i>М4 · Золота</span>
+            <h3 class="card__title"><a href="station-mayak.html">Маяк</a></h3>
+            <p class="card__meta">Відкрито: 07.07.2023</p>
+            <p class="card__text">Крайня Пустка · наземна крита станція</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-mayak.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="3" data-filter-value="yellow" data-search-text="Сонячна Долина Золота лінія Лісопарк">
+          <div class="card__media">
+            <img src="images/station-sonyachna-dolyna.svg" alt="Станція «Сонячна Долина» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--yellow"><i></i>М4 · Золота</span>
+            <h3 class="card__title"><a href="station-sonyachna-dolyna.html">Сонячна Долина</a></h3>
+            <p class="card__meta">Відкрито: 21.01.2022</p>
+            <p class="card__text">Лісопарк · пілонна станція глибокого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-sonyachna-dolyna.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="4" data-filter-value="purple" data-search-text="Аметистова Гео Аметистова лінія Гірський масив">
+          <div class="card__media">
+            <img src="images/station-ametystova-heo.svg" alt="Станція «Аметистова Гео» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--purple"><i></i>М5 · Аметистова</span>
+            <h3 class="card__title"><a href="station-ametystova-heo.html">Аметистова Гео</a></h3>
+            <p class="card__meta">Відкрито: 02.07.2025</p>
+            <p class="card__text">Гірський масив · естакадна станція</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-ametystova-heo.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="5" data-filter-value="purple" data-search-text="Друзова Аметистова лінія Індустріальна зона">
+          <div class="card__media">
+            <img src="images/station-druzova.svg" alt="Станція «Друзова» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--purple"><i></i>М5 · Аметистова</span>
+            <h3 class="card__title"><a href="station-druzova.html">Друзова</a></h3>
+            <p class="card__meta">Відкрито: 12.02.2019</p>
+            <p class="card__text">Індустріальна зона · пілонна станція глибокого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-druzova.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="0" data-filter-value="purple" data-search-text="Глибинна Затока Аметистова лінія Старе Село">
+          <div class="card__media">
+            <img src="images/station-hlybynna-zatoka.svg" alt="Станція «Глибинна Затока» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--purple"><i></i>М5 · Аметистова</span>
+            <h3 class="card__title"><a href="station-hlybynna-zatoka.html">Глибинна Затока</a></h3>
+            <p class="card__meta">Відкрито: 21.04.2024</p>
+            <p class="card__text">Старе Село · естакадна станція</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-hlybynna-zatoka.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="1" data-filter-value="purple" data-search-text="Ехо-Шард Аметистова лінія Лісопарк">
+          <div class="card__media">
+            <img src="images/station-ekho-shard.svg" alt="Станція «Ехо-Шард» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--purple"><i></i>М5 · Аметистова</span>
+            <h3 class="card__title"><a href="station-ekho-shard.html">Ехо-Шард</a></h3>
+            <p class="card__meta">Відкрито: 18.11.2021</p>
+            <p class="card__text">Лісопарк · колонна станція глибокого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-ekho-shard.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="2" data-filter-value="purple" data-search-text="Скалк-Сад Аметистова лінія Лісопарк">
+          <div class="card__media">
+            <img src="images/station-skalk-sad.svg" alt="Станція «Скалк-Сад» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--purple"><i></i>М5 · Аметистова</span>
+            <h3 class="card__title"><a href="station-skalk-sad.html">Скалк-Сад</a></h3>
+            <p class="card__meta">Відкрито: 26.11.2024</p>
+            <p class="card__text">Лісопарк · односклепінна станція мілкого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-skalk-sad.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="3" data-filter-value="purple" data-search-text="Стародавнє Місто Аметистова лінія Кам'яне Місто">
+          <div class="card__media">
+            <img src="images/station-starodavnye-misto.svg" alt="Станція «Стародавнє Місто» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--purple"><i></i>М5 · Аметистова</span>
+            <h3 class="card__title"><a href="station-starodavnye-misto.html">Стародавнє Місто</a></h3>
+            <p class="card__meta">Відкрито: 02.04.2025</p>
+            <p class="card__text">Кам'яне Місто · пілонна станція глибокого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-starodavnye-misto.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="4" data-filter-value="purple" data-search-text="Ворота Вардена Аметистова лінія Крайня Пустка">
+          <div class="card__media">
+            <img src="images/station-vorota-vardena.svg" alt="Станція «Ворота Вардена» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--purple"><i></i>М5 · Аметистова</span>
+            <h3 class="card__title"><a href="station-vorota-vardena.html">Ворота Вардена</a></h3>
+            <p class="card__meta">Відкрито: 05.10.2020</p>
+            <p class="card__text">Крайня Пустка · односклепінна станція мілкого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-vorota-vardena.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="5" data-filter-value="purple" data-search-text="Порталова Площа Аметистова лінія Крайня Пустка">
+          <div class="card__media">
+            <img src="images/station-portalova-ploshcha.svg" alt="Станція «Порталова Площа» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--purple"><i></i>М5 · Аметистова</span>
+            <h3 class="card__title"><a href="station-portalova-ploshcha.html">Порталова Площа</a></h3>
+            <p class="card__meta">Відкрито: 26.06.2021</p>
+            <p class="card__text">Крайня Пустка · наземна крита станція</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-portalova-ploshcha.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="0" data-filter-value="purple" data-search-text="Ендер-Око Аметистова лінія Індустріальна зона">
+          <div class="card__media">
+            <img src="images/station-ender-oko.svg" alt="Станція «Ендер-Око» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--purple"><i></i>М5 · Аметистова</span>
+            <h3 class="card__title"><a href="station-ender-oko.html">Ендер-Око</a></h3>
+            <p class="card__meta">Відкрито: 06.12.2019</p>
+            <p class="card__text">Індустріальна зона · колонна станція глибокого закладення</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-ender-oko.html">Детальніше</a></p>
+          </div>
+        </article>
+        <article class="card glass reveal" data-anim="zoom" data-delay="1" data-filter-value="purple" data-search-text="Край Аметистова лінія Долина Ріки">
+          <div class="card__media">
+            <img src="images/station-kray.svg" alt="Станція «Край» у стилі Minecraft" loading="lazy" width="800" height="500">
+            <div class="card__overlay"><span class="btn btn--sm">Детальніше</span></div>
+          </div>
+          <div class="card__body">
+            <span class="line-badge line--purple"><i></i>М5 · Аметистова</span>
+            <h3 class="card__title"><a href="station-kray.html">Край</a></h3>
+            <p class="card__meta">Відкрито: 04.09.2025</p>
+            <p class="card__text">Долина Ріки · наземна крита станція</p>
+            <p class="card__foot"><a class="btn btn--ghost btn--sm" href="station-kray.html">Детальніше</a></p>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <a class="brand" href="index.html">
+            <span class="brand__mark" aria-hidden="true"></span>
+            <span class="brand__text">Смарагдовий<span>Метрополітен</span></span>
+          </a>
+          <p class="card__text" >Підземна транспортна мережа, побудована блок за блоком у світі Minecraft.</p>
+        </div>
+        <div>
+          <h2 class="footer__title">Навігація</h2>
+          <ul class="footer__list">
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="map.html">Схема метро</a></li>
+            <li><a href="stations.html">Станції</a></li>
+            <li><a href="trains.html">Поїзди</a></li>
+            <li><a href="news.html">Новини</a></li>
+            <li><a href="about.html">Про метро</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer__title">Лінії</h2>
+          <ul class="footer__list">
+            <li><a href="map.html">М1 · Червона лінія</a></li>
+            <li><a href="map.html">М2 · Синя лінія</a></li>
+            <li><a href="map.html">М3 · Смарагдова лінія</a></li>
+            <li><a href="map.html">М4 · Золота лінія</a></li>
+            <li><a href="map.html">М5 · Аметистова лінія</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span data-current-year>2026</span> Смарагдовий Метрополітен. Вигаданий проєкт у світі Minecraft.</p>
+        <p>Побудовано з <span aria-hidden="true">▣</span> 4 820 000 блоків</p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Повернутися нагору">↑</button>
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>
