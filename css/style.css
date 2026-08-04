@@ -83,7 +83,7 @@ body {
   line-height: 1.7;
   font-weight: 400;
   letter-spacing: 0.002em;
-  overflow-x: hidden;
+  max-width: 100%;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   background-image:
@@ -1655,3 +1655,4 @@ strong {
   border-color: color-mix(in oklab, var(--lc) 55%, transparent);
   box-shadow: 0 0 0 1px color-mix(in oklab, var(--lc) 30%, transparent), var(--sh-3);
 }
+

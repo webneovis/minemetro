@@ -8,14 +8,39 @@
     const menu = document.querySelector(".nav__menu");
     const scrim = document.querySelector(".nav-scrim");
 
+    let closeTimer = 0;
+
     const setMenu = (open) => {
       if (!menu || !burger) return;
+      const wasOpen = menu.classList.contains("is-open");
       menu.classList.toggle("is-open", open);
       burger.classList.toggle("is-open", open);
       burger.setAttribute("aria-expanded", String(open));
       burger.setAttribute("aria-label", open ? "Закрити меню" : "Відкрити меню");
       if (scrim) scrim.classList.toggle("is-visible", open);
-      document.body.style.overflow = open && window.innerWidth <= 900 ? "hidden" : "";
+
+      const mobile = window.innerWidth <= 900;
+      if (open) {
+        menu.classList.remove("is-closing");
+        if (closeTimer) {
+          window.clearTimeout(closeTimer);
+          closeTimer = 0;
+        }
+        document.body.style.overflow = mobile ? "hidden" : "";
+      } else if (mobile && wasOpen) {
+        // під час анімації закриття панель тимчасово виходить праворуч,
+        // тому тримаємо блокування прокрутки до її завершення
+        menu.classList.add("is-closing");
+        if (closeTimer) window.clearTimeout(closeTimer);
+        closeTimer = window.setTimeout(() => {
+          menu.classList.remove("is-closing");
+          document.body.style.overflow = "";
+          closeTimer = 0;
+        }, 460);
+      } else {
+        menu.classList.remove("is-closing");
+        document.body.style.overflow = "";
+      }
     };
 
     if (burger && menu) {

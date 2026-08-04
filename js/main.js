@@ -2,6 +2,58 @@
 (function () {
   "use strict";
 
+  /**
+   * Плавна прокрутка до самого початку документа.
+   * Працює однаково у всіх сучасних браузерах: використовує нативний
+   * smooth-скрол, а якщо він недоступний або був перерваний — власну
+   * rAF-анімацію, яка гарантовано завершується у точці 0.
+   */
+  function scrollToTop() {
+    var start = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if (start <= 0) return;
+
+    var supportsSmooth =
+      "scrollBehavior" in document.documentElement.style &&
+      !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (supportsSmooth) {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+
+      // страховка: якщо нативна анімація зупинилась не на нулі
+      var checks = 0;
+      var settle = window.setInterval(function () {
+        var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+        checks += 1;
+        if (y <= 0) {
+          window.clearInterval(settle);
+        } else if (checks > 40) {
+          window.clearInterval(settle);
+          window.scrollTo(0, 0);
+          document.documentElement.scrollTop = 0;
+          document.body.scrollTop = 0;
+        }
+      }, 50);
+      return;
+    }
+
+    var duration = 420;
+    var begin = null;
+    function step(timestamp) {
+      if (begin === null) begin = timestamp;
+      var progress = Math.min((timestamp - begin) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      window.scrollTo(0, Math.round(start * (1 - eased)));
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      } else {
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+      }
+    }
+    window.requestAnimationFrame(step);
+  }
+
   function formatNumber(value) {
     return String(value).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   }
@@ -55,8 +107,9 @@
         },
         { passive: true }
       );
-      toTop.addEventListener("click", function () {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+      toTop.addEventListener("click", function (event) {
+        event.preventDefault();
+        scrollToTop();
       });
     }
 

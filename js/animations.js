@@ -33,17 +33,58 @@
       }
     }
 
-    // індикатор прогресу сторінки
+    // індикатор прогресу читання сторінки
     var bar = document.querySelector(".page-progress");
     if (bar) {
+      var ticking = false;
+
       var update = function () {
-        var max = document.documentElement.scrollHeight - window.innerHeight;
-        var ratio = max > 0 ? window.scrollY / max : 0;
+        ticking = false;
+
+        var doc = document.documentElement;
+        var body = document.body;
+        // повна висота документа (найбільше з можливих значень)
+        var docHeight = Math.max(
+          doc.scrollHeight,
+          doc.offsetHeight,
+          doc.clientHeight,
+          body ? body.scrollHeight : 0,
+          body ? body.offsetHeight : 0
+        );
+        var viewport = window.innerHeight || doc.clientHeight || 0;
+        var scrolled = window.pageYOffset || doc.scrollTop || 0;
+        var max = docHeight - viewport;
+
+        var ratio;
+        if (max <= 1) {
+          // коротка сторінка: прокручувати нічого
+          ratio = 0;
+        } else {
+          ratio = scrolled / max;
+        }
+        if (ratio < 0) ratio = 0;
+        if (ratio > 1) ratio = 1;
+
         bar.style.width = (ratio * 100).toFixed(2) + "%";
       };
+
+      var requestUpdate = function () {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(update);
+      };
+
       update();
-      window.addEventListener("scroll", update, { passive: true });
-      window.addEventListener("resize", update);
+      window.addEventListener("scroll", requestUpdate, { passive: true });
+      window.addEventListener("resize", requestUpdate);
+      window.addEventListener("orientationchange", requestUpdate);
+      window.addEventListener("load", requestUpdate);
+      window.addEventListener("pageshow", requestUpdate);
+
+      // висота сторінки змінюється через reveal-анімації, картинки, лайтбокси
+      if ("ResizeObserver" in window && document.body) {
+        new ResizeObserver(requestUpdate).observe(document.body);
+      }
     }
 
     // плавний перехід між сторінками
@@ -62,3 +103,4 @@
     });
   });
 })();
+
