@@ -1,172 +1,165 @@
 /* ==========================================================================
-   Emerald Metro — адаптивність (1920 → 320 px)
+   MineMetro — адаптивність: телефони, планшети, ноутбуки, великі екрани
    ========================================================================== */
 
-@media (max-width: 1440px) {
+@media (min-width: 1600px) {
   :root {
-    --wrap: 1160px;
+    --wrap: 1360px;
+  }
+
+  body {
+    font-size: 17px;
   }
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1100px) {
   .stats {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  .grid--4 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 1024px) {
-  .section {
-    padding: 66px 0;
-  }
-  .split {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-  .grid--3,
-  .grid--4 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .grid--4 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .footer__grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-/* бургер-меню ------------------------------------------------------------ */
-
 @media (max-width: 900px) {
   .nav__burger {
     display: block;
+    position: relative;
+    z-index: 80;
   }
 
-  .nav__menu {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 100%;
-    display: none;
-    padding: 14px 20px 22px;
-    background: rgba(9, 14, 11, 0.97);
-    backdrop-filter: blur(18px);
-    border-bottom: 1px solid var(--line);
-    box-shadow: 0 24px 40px -28px #000;
+  .split {
+    grid-template-columns: 1fr;
   }
 
-  .nav__menu.is-open {
-    display: block;
-    animation: menuIn 0.32s var(--ease) both;
-  }
-
-  .nav__list {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 2px;
-  }
-
-  .nav__list li {
-    opacity: 0;
-    animation: slideRight 0.4s var(--ease) both;
-  }
-
-  .nav__menu.is-open li:nth-child(1) {
-    animation-delay: 0.04s;
-  }
-  .nav__menu.is-open li:nth-child(2) {
-    animation-delay: 0.09s;
-  }
-  .nav__menu.is-open li:nth-child(3) {
-    animation-delay: 0.14s;
-  }
-  .nav__menu.is-open li:nth-child(4) {
-    animation-delay: 0.19s;
-  }
-  .nav__menu.is-open li:nth-child(5) {
-    animation-delay: 0.24s;
-  }
-  .nav__menu.is-open li:nth-child(6) {
-    animation-delay: 0.29s;
-  }
-
-  .nav__link {
-    padding: 14px 12px;
-    font-size: 0.86rem;
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-    font-size: 15.5px;
-  }
-  .hero {
-    min-height: auto;
-  }
-  .hero__inner {
-    padding: 88px 0 76px;
-    max-width: 100%;
-  }
-  .stats,
-  .grid--2,
   .grid--3,
   .grid--4 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero__media::after {
+    background:
+      linear-gradient(180deg, rgba(4, 8, 7, 0.7) 0%, rgba(4, 8, 7, 0.92) 55%, var(--bg) 100%);
+  }
+
+  .metro-map {
+    min-width: 820px;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .grid--2,
+  .grid--3,
+  .grid--4 {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .spec-list {
+    grid-template-columns: 1fr;
+  }
+
   .gallery-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .section {
-    padding: 54px 0;
-  }
-}
 
-@media (max-width: 560px) {
-  .stats,
-  .grid--2,
-  .grid--3,
-  .grid--4,
-  .spec-list,
   .footer__grid {
     grid-template-columns: 1fr;
   }
-  .hero__actions .btn {
-    width: 100%;
-    justify-content: center;
-  }
-  .map-shell {
-    padding: 10px;
-  }
+
   .footer__bottom {
     flex-direction: column;
     align-items: flex-start;
+    text-align: left;
+  }
+
+  .hero__inner {
+    max-width: 100%;
+  }
+
+  .hero__actions {
+    width: 100%;
+  }
+
+  .hero__actions .btn {
+    flex: 1 1 200px;
+  }
+
+  .btn + .btn {
+    margin-left: 0;
+  }
+
+  .page-hero .btn {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .map-shell {
+    padding: 10px;
+  }
+
+  .metro-map {
+    min-width: 720px;
+  }
+
+  .metro-map .map-station text {
+    font-size: 13px;
+  }
+
+  .to-top {
+    right: 14px;
+    bottom: 14px;
+    width: 44px;
+    height: 44px;
   }
 }
 
-@media (max-width: 430px) {
-  .wrap {
-    padding: 0 15px;
+@media (max-width: 460px) {
+  .stats {
+    grid-template-columns: 1fr;
   }
-  h1 {
-    font-size: 1.85rem;
-  }
+
   .gallery-grid {
     grid-template-columns: 1fr;
   }
-  .brand__text span {
-    display: none;
+
+  .brand__text {
+    font-size: 1rem;
   }
-  .stat {
-    padding: 20px 16px;
+
+  .hero__lines i {
+    width: 44px;
   }
 }
 
-@media (max-width: 340px) {
-  .wrap {
-    padding: 0 12px;
+@media print {
+  .site-header,
+  .to-top,
+  .page-progress,
+  .nav-scrim,
+  .lightbox {
+    display: none !important;
   }
-  .btn {
-    padding: 13px 16px;
-    font-size: 0.72rem;
-    letter-spacing: 0.1em;
+
+  body {
+    background: #fff;
+    color: #111;
   }
 }

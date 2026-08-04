@@ -3,15 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Смарагдовий Метрополітен — метро світу Minecraft</title>
-  <meta name="description" content="Офіційний портал вигаданого Смарагдового метрополітену у світі Minecraft: схема з 5 ліній, 50 станцій, поїзди, новини та історія мережі.">
+  <title>MineMetro — метро світу Minecraft</title>
+  <meta name="description" content="Офіційний портал вигаданого метрополітену MineMetro у світі Minecraft: схема з 5 ліній, 50 станцій, поїзди, новини та історія мережі.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Смарагдовий Метрополітен — метро світу Minecraft">
-  <meta property="og:description" content="Офіційний портал вигаданого Смарагдового метрополітену у світі Minecraft: схема з 5 ліній, 50 станцій, поїзди, новини та історія мережі.">
+  <meta property="og:title" content="MineMetro — метро світу Minecraft">
+  <meta property="og:description" content="Офіційний портал вигаданого метрополітену MineMetro у світі Minecraft: схема з 5 ліній, 50 станцій, поїзди, новини та історія мережі.">
   <meta property="og:image" content="images/hero.jpg">
-  <meta property="og:site_name" content="Смарагдовий Метрополітен">
+  <meta property="og:site_name" content="MineMetro">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <meta name="theme-color" content="#070b0a">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/responsive.css">
@@ -19,12 +23,12 @@
 <body>
   <div class="page-progress" aria-hidden="true"></div>
   <header class="site-header">
-    <div class="pixel-strip" aria-hidden="true"></div>
+    <span class="header__line" aria-hidden="true"></span>
     <div class="wrap">
       <nav class="nav" aria-label="Головна навігація">
         <a class="brand" href="index.html">
-          <span class="brand__mark" aria-hidden="true"></span>
-          <span class="brand__text">Смарагдовий<span>Метрополітен</span></span>
+          <span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="color:#2fe0a0"><rect x="4" y="3" width="16" height="13" rx="3"></rect><path d="M4 10h16"></path><path d="M8.5 13.2h.01"></path><path d="M15.5 13.2h.01"></path><path d="M7 16l-2.4 4.5"></path><path d="M17 16l2.4 4.5"></path></svg></span>
+          <span class="brand__text">MineMetro<span>Metro Network</span></span>
         </a>
         <button class="nav__burger" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="main-menu">
           <span></span><span></span><span></span>
@@ -42,16 +46,17 @@
       </nav>
     </div>
   </header>
+  <div class="nav-scrim" aria-hidden="true"></div>
   <main>
     <section class="hero">
       <div class="hero__media">
-        <img src="images/hero.jpg" alt="Підземна станція Смарагдового метрополітену у стилі Minecraft" width="1920" height="1088">
+        <img src="images/hero.jpg" alt="Підземна станція MineMetro у стилі Minecraft" width="1920" height="1088">
       </div>
       <span class="hero-train" aria-hidden="true"></span>
       <div class="wrap">
         <div class="hero__inner">
           <p class="hero__tag">Мережа з 5 ліній · 50 станцій</p>
-          <h1 class="hero__title">Смарагдовий <em>Метрополітен</em></h1>
+          <h1 class="hero__title">Mine<em>Metro</em></h1>
           <p class="hero__text">Підземна транспортна мережа, побудована блок за блоком у світі Minecraft. Швидко, безпечно й точно за розкладом — від Обсидіанової до станції «Край».</p>
           <div class="hero__actions">
             <a class="btn" href="map.html">Схема метро</a>
@@ -231,8 +236,8 @@
       <div class="footer__grid">
         <div>
           <a class="brand" href="index.html">
-            <span class="brand__mark" aria-hidden="true"></span>
-            <span class="brand__text">Смарагдовий<span>Метрополітен</span></span>
+            <span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="color:#2fe0a0"><rect x="4" y="3" width="16" height="13" rx="3"></rect><path d="M4 10h16"></path><path d="M8.5 13.2h.01"></path><path d="M15.5 13.2h.01"></path><path d="M7 16l-2.4 4.5"></path><path d="M17 16l2.4 4.5"></path></svg></span>
+            <span class="brand__text">MineMetro<span>Metro Network</span></span>
           </a>
           <p class="card__text" >Підземна транспортна мережа, побудована блок за блоком у світі Minecraft.</p>
         </div>
@@ -259,7 +264,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p>© <span data-current-year>2026</span> Смарагдовий Метрополітен. Вигаданий проєкт у світі Minecraft.</p>
+        <p>© <span data-current-year>2026</span> MineMetro. Вигаданий проєкт у світі Minecraft.</p>
         <p>Побудовано з <span aria-hidden="true">▣</span> 4 820 000 блоків</p>
       </div>
     </div>

@@ -1,52 +1,52 @@
-/* navigation.js — sticky-хедер, бургер-меню, підсвітка активного пункту */
+/* navigation.js — sticky-хедер, бургер-меню з drawer, підсвітка активного пункту */
 (function () {
   "use strict";
 
   document.addEventListener("DOMContentLoaded", function () {
-    var header = document.querySelector(".site-header");
-    var burger = document.querySelector(".nav__burger");
-    var menu = document.querySelector(".nav__menu");
+    const header = document.querySelector(".site-header");
+    const burger = document.querySelector(".nav__burger");
+    const menu = document.querySelector(".nav__menu");
+    const scrim = document.querySelector(".nav-scrim");
+
+    const setMenu = (open) => {
+      if (!menu || !burger) return;
+      menu.classList.toggle("is-open", open);
+      burger.classList.toggle("is-open", open);
+      burger.setAttribute("aria-expanded", String(open));
+      burger.setAttribute("aria-label", open ? "Закрити меню" : "Відкрити меню");
+      if (scrim) scrim.classList.toggle("is-visible", open);
+      document.body.style.overflow = open && window.innerWidth <= 900 ? "hidden" : "";
+    };
 
     if (burger && menu) {
-      burger.addEventListener("click", function () {
-        var open = menu.classList.toggle("is-open");
-        burger.classList.toggle("is-open", open);
-        burger.setAttribute("aria-expanded", String(open));
+      burger.addEventListener("click", () => setMenu(!menu.classList.contains("is-open")));
+      menu.addEventListener("click", (event) => {
+        if (event.target.closest(".nav__link")) setMenu(false);
       });
-
-      menu.addEventListener("click", function (event) {
-        if (event.target.closest(".nav__link")) {
-          menu.classList.remove("is-open");
-          burger.classList.remove("is-open");
-          burger.setAttribute("aria-expanded", "false");
-        }
+      if (scrim) scrim.addEventListener("click", () => setMenu(false));
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") setMenu(false);
       });
-
-      document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape") {
-          menu.classList.remove("is-open");
-          burger.classList.remove("is-open");
-        }
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 900) setMenu(false);
       });
     }
 
     if (header) {
-      var onScroll = function () {
-        header.classList.toggle("is-scrolled", window.scrollY > 24);
-      };
+      const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 12);
       onScroll();
       window.addEventListener("scroll", onScroll, { passive: true });
     }
 
-    // активний пункт меню за поточним файлом
-    var current = window.location.pathname.split("/").pop() || "index.html";
-    var links = document.querySelectorAll(".nav__link");
-    for (var i = 0; i < links.length; i += 1) {
-      var href = links[i].getAttribute("href");
-      var group = links[i].getAttribute("data-match");
-      if (href === current || (group && current.indexOf(group) === 0)) {
-        links[i].classList.add("is-active");
-      }
-    }
+    // активний пункт меню
+    const path = window.location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll(".nav__link").forEach((link) => {
+      const href = link.getAttribute("href");
+      const match = link.getAttribute("data-match");
+      const active = href === path || (match && path.indexOf(match) === 0);
+      link.classList.toggle("is-active", Boolean(active));
+      if (active) link.setAttribute("aria-current", "page");
+    });
   });
 })();
+
