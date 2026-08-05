@@ -79,8 +79,9 @@
 /* --------------------------------------------- переходи між сторінками */
 
 body.page-fade {
-  animation: pageIn 0.5s var(--ease-out) both;
+  animation: pageIn 0.5s var(--ease-out) backwards;
 }
+
 
 @keyframes pageIn {
   from {
