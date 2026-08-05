@@ -17,9 +17,15 @@
       var line = node.getAttribute("data-line-name");
       var transfer = node.getAttribute("data-transfer");
       tooltip.textContent = name + " · " + line + (transfer ? " · пересадка" : "");
-      tooltip.style.left = event.clientX + "px";
-      tooltip.style.top = event.clientY + "px";
       tooltip.classList.add("is-visible");
+      // тултип фіксований і центрується через translate(-50%), тому біля країв
+      // екрана він виходив за viewport і розширював документ — обмежуємо позицію
+      var half = tooltip.offsetWidth / 2;
+      var min = half + 8;
+      var max = document.documentElement.clientWidth - half - 8;
+      var x = Math.min(Math.max(event.clientX, min), Math.max(min, max));
+      tooltip.style.left = x + "px";
+      tooltip.style.top = event.clientY + "px";
     }
 
     for (var i = 0; i < stations.length; i += 1) {
@@ -68,3 +74,4 @@
     }
   });
 })();
+

@@ -10,6 +10,18 @@
 
     let closeTimer = 0;
 
+    // ширина системного скролбара — щоб блокування прокрутки не зсувало сторінку
+    const lockScroll = (lock) => {
+      if (lock) {
+        const gap = window.innerWidth - document.documentElement.clientWidth;
+        document.body.style.overflow = "hidden";
+        document.body.style.paddingRight = gap > 0 ? gap + "px" : "";
+      } else {
+        document.body.style.overflow = "";
+        document.body.style.paddingRight = "";
+      }
+    };
+
     const setMenu = (open) => {
       if (!menu || !burger) return;
       const wasOpen = menu.classList.contains("is-open");
@@ -26,22 +38,35 @@
           window.clearTimeout(closeTimer);
           closeTimer = 0;
         }
-        document.body.style.overflow = mobile ? "hidden" : "";
+        if (mobile) lockScroll(true);
+        else lockScroll(false);
       } else if (mobile && wasOpen) {
-        // під час анімації закриття панель тимчасово виходить праворуч,
-        // тому тримаємо блокування прокрутки до її завершення
+        // прокрутку розблоковуємо одразу: панель більше не виходить за viewport,
+        // клас is-closing лише тримає її у DOM до кінця анімації
         menu.classList.add("is-closing");
+        lockScroll(false);
         if (closeTimer) window.clearTimeout(closeTimer);
         closeTimer = window.setTimeout(() => {
           menu.classList.remove("is-closing");
-          document.body.style.overflow = "";
           closeTimer = 0;
         }, 460);
       } else {
         menu.classList.remove("is-closing");
-        document.body.style.overflow = "";
+        lockScroll(false);
       }
     };
+
+    // якщо анімація закриття завершилась раніше за таймер — прибираємо клас одразу
+    if (menu) {
+      menu.addEventListener("animationend", (event) => {
+        if (event.target !== menu || !menu.classList.contains("is-closing")) return;
+        menu.classList.remove("is-closing");
+        if (closeTimer) {
+          window.clearTimeout(closeTimer);
+          closeTimer = 0;
+        }
+      });
+    }
 
     if (burger && menu) {
       burger.addEventListener("click", () => setMenu(!menu.classList.contains("is-open")));
@@ -53,7 +78,16 @@
         if (event.key === "Escape") setMenu(false);
       });
       window.addEventListener("resize", () => {
-        if (window.innerWidth > 900) setMenu(false);
+        if (window.innerWidth > 900) {
+          setMenu(false);
+          // на десктопі не має лишатися ні класів анімації, ні блокування прокрутки
+          menu.classList.remove("is-closing");
+          if (closeTimer) {
+            window.clearTimeout(closeTimer);
+            closeTimer = 0;
+          }
+          lockScroll(false);
+        }
       });
     }
 

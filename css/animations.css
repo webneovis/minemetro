@@ -117,6 +117,8 @@ body.is-leaving {
     -webkit-backdrop-filter: blur(26px) saturate(160%);
     border-left: 1px solid var(--glass-brd);
     box-shadow: -30px 0 70px -40px #000;
+    /* overflow-x приховує лише внутрішній зсув пунктів меню, а не проблему сторінки */
+    overflow-x: hidden;
     overflow-y: auto;
     /* Закрите меню повністю виводиться з потоку, тому воно не створює
        горизонтальної прокрутки документа (замість transform: translateX(102%)). */
@@ -138,21 +140,24 @@ body.is-leaving {
     pointer-events: none;
   }
 
+  /* Панель ніколи не виходить за межі viewport: замість зсуву фіксованого
+     елемента праворуч (що збільшувало ширину документа) вона розкривається
+     від правого краю через clip-path. Візуально — та сама поява справа. */
   @keyframes drawerIn {
     from {
-      transform: translateX(102%);
+      clip-path: inset(0 0 0 100%);
     }
     to {
-      transform: none;
+      clip-path: inset(0 0 0 0);
     }
   }
 
   @keyframes drawerOut {
     from {
-      transform: none;
+      clip-path: inset(0 0 0 0);
     }
     to {
-      transform: translateX(102%);
+      clip-path: inset(0 0 0 100%);
     }
   }
 

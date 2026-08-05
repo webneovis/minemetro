@@ -68,10 +68,6 @@
     grid-template-columns: 1fr;
   }
 
-  .stats {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .spec-list {
     grid-template-columns: 1fr;
   }
@@ -124,7 +120,7 @@
   }
 
   .to-top {
-    right: 14px;
+    right: 17px;
     bottom: 14px;
     width: 44px;
     height: 44px;
@@ -199,4 +195,6 @@ blockquote {
   overflow-wrap: break-word;
   word-break: break-word;
 }
+
+
 
