@@ -942,7 +942,6 @@ strong {
   color: var(--text-dim);
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  margin: 0;
 }
 
 .card__text {
@@ -972,6 +971,7 @@ strong {
   border: 1px solid currentColor;
   background: rgba(255, 255, 255, 0.04);
   white-space: nowrap;
+  margin-bottom: 25px;
 }
 
 .line-badge i {
