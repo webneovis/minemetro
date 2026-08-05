@@ -37,9 +37,23 @@
     var bar = document.querySelector(".page-progress");
     if (bar) {
       var ticking = false;
+      var wasLocked = false;
+
+      // Поки відкрите (або закривається) мобільне меню, body отримує
+      // overflow:hidden — висота документа тимчасово недостовірна,
+      // тому прогрес заморожуємо на останньому коректному значенні.
+      var isMenuLocked = function () {
+        return !!document.querySelector(".nav__menu.is-open, .nav__menu.is-closing");
+      };
 
       var update = function () {
         ticking = false;
+
+        if (isMenuLocked()) {
+          wasLocked = true;
+          return;
+        }
+        wasLocked = false;
 
         var doc = document.documentElement;
         var body = document.body;
@@ -84,6 +98,14 @@
       // висота сторінки змінюється через reveal-анімації, картинки, лайтбокси
       if ("ResizeObserver" in window && document.body) {
         new ResizeObserver(requestUpdate).observe(document.body);
+      }
+
+      // щойно меню повністю закрилось — перерахувати за реальною висотою
+      var menuEl = document.querySelector(".nav__menu");
+      if (menuEl && "MutationObserver" in window) {
+        new MutationObserver(function () {
+          if (wasLocked && !isMenuLocked()) requestUpdate();
+        }).observe(menuEl, { attributes: true, attributeFilter: ["class"] });
       }
     }
 
