@@ -1505,6 +1505,226 @@ strong {
   display: none !important;
 }
 
+/* ===========================================================
+   FARES
+=========================================================== */
+
+.fare-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:26px;
+    margin-top:42px;
+}
+
+.fare-card{
+
+    position:relative;
+    overflow:hidden;
+
+    padding:34px;
+
+    border-radius:var(--r-lg);
+
+    display:flex;
+    flex-direction:column;
+
+    transition:
+    transform .35s,
+    border-color .35s,
+    box-shadow .35s;
+
+}
+
+.fare-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(47,224,160,.45);
+
+    box-shadow:var(--sh-glow);
+
+}
+
+.fare-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(140deg,
+    rgba(47,224,160,.05),
+    transparent 45%);
+
+    pointer-events:none;
+
+}
+
+.fare-card__icon{
+
+    width:82px;
+    height:82px;
+
+    border-radius:18px;
+
+    display:grid;
+    place-items:center;
+
+    font-size:38px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid var(--glass-brd);
+
+    margin-bottom:24px;
+
+}
+
+.fare-card__badge{
+
+    display:inline-flex;
+
+    width:max-content;
+
+    padding:7px 14px;
+
+    margin-bottom:20px;
+
+    border-radius:999px;
+
+    font-size:.65rem;
+
+    letter-spacing:.24em;
+
+    text-transform:uppercase;
+
+    font-family:var(--font-mono);
+
+    color:var(--accent);
+
+    border:1px solid rgba(47,224,160,.35);
+
+    background:rgba(47,224,160,.08);
+
+}
+
+.fare-card h3{
+
+    margin-bottom:14px;
+
+}
+
+.fare-card__price{
+
+    font-size:3rem;
+
+    font-weight:700;
+
+    line-height:1;
+
+    color:var(--accent);
+
+    margin-bottom:26px;
+
+    font-family:var(--font-display);
+
+}
+
+.fare-card__price span{
+
+    display:block;
+
+    margin-top:8px;
+
+    font-size:.85rem;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    color:var(--text-dim);
+
+    font-family:var(--font-mono);
+
+}
+
+.fare-features{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0 0 32px;
+
+    display:grid;
+
+    gap:12px;
+
+}
+
+.fare-features li{
+
+    color:var(--text-soft);
+
+    font-size:.95rem;
+
+}
+
+.fare-card .btn{
+
+    margin-top:auto;
+
+    width:100%;
+
+}
+
+.fare-card--featured{
+
+    transform:translateY(-14px);
+
+    border:1px solid rgba(47,224,160,.45);
+
+    box-shadow:
+    0 0 0 1px rgba(47,224,160,.18),
+    0 24px 70px -30px rgba(47,224,160,.35);
+
+}
+
+.fare-card--featured::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-80px;
+
+    background:
+    radial-gradient(circle,
+    rgba(47,224,160,.16),
+    transparent 65%);
+
+    pointer-events:none;
+
+}
+
+@media(max-width:900px){
+
+.fare-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.fare-card--featured{
+
+transform:none;
+
+}
+
+}
+
 /* -------------------------------------------------------------- футер */
 
 .site-footer {
