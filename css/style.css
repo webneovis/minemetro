@@ -1143,7 +1143,7 @@ strong {
 .metro-map .map-line {
   fill: none;
   stroke: var(--lc, var(--accent));
-  stroke-width: 8;
+  stroke-width: 6;
   stroke-linecap: round;
   stroke-linejoin: round;
   opacity: 0.95;
@@ -1183,7 +1183,30 @@ strong {
   stroke-linejoin: round;
   transition: fill var(--t) var(--ease);
   pointer-events: none;
+  fill: currentColor;
 }
+
+/* Кольори станцій */
+.metro-map .map-station.line--red {
+  color: #ff5b52;
+}
+
+.metro-map .map-station.line--blue {
+  color: #4da3ff;
+}
+
+.metro-map .map-station.line--green {
+  color: #2fe0a0;
+}
+
+.metro-map .map-station.line--yellow {
+  color: #ffc83d;
+}
+
+.metro-map .map-station.line--purple {
+  color: #a970ff;
+}
+
 
 .metro-map .map-station:hover circle,
 .metro-map .map-station:focus-visible circle {
@@ -2047,6 +2070,7 @@ transform:none;
   border-color: color-mix(in oklab, var(--lc) 55%, transparent);
   box-shadow: 0 0 0 1px color-mix(in oklab, var(--lc) 30%, transparent), var(--sh-3);
 }
+
 
 
 
