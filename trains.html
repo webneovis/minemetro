@@ -59,8 +59,14 @@
 
     <section class="section section--tight">
       <div class="wrap">
-        <div class="grid grid--2">
-          <article class="card glass reveal" data-anim="zoom" data-delay="0">
+        <div class="filters reveal">
+          <button type="button" class="is-active" data-filter="all">Всі поїзди</button>
+          <button type="button" data-filter="passenger">Пасажирські електропоїзди</button>
+          <button type="button" data-filter="service">Службові поїзди</button>
+          <button type="button" data-filter="special">Спеціальні поїзди</button>
+        </div>
+        <div class="grid grid--2" data-gallery>
+          <article class="card glass reveal" data-filter-value="service" data-anim="zoom" data-delay="0">
             <div class="card__media">
               <img src="images/train-1.jpg" alt="Тип «Вагонетка-01» — потяг у стилі Minecraft" loading="lazy" width="800" height="500">
               <div class="card__overlay"><span class="btn btn--sm">42 бл/с</span></div>
@@ -71,7 +77,7 @@
               <p class="card__text">Перший серійний склад мережі, зібраний із дубових блоків та заліза. Досі працює на Червоній лінії у години пік.</p>
             </div>
           </article>
-          <article class="card glass reveal" data-anim="zoom" data-delay="1">
+          <article class="card glass reveal" data-filter-value="passenger" data-anim="zoom" data-delay="1">
             <div class="card__media">
               <img src="images/train-2.jpg" alt="Тип «Редстоун-Експрес» — потяг у стилі Minecraft" loading="lazy" width="800" height="500">
               <div class="card__overlay"><span class="btn btn--sm">58 бл/с</span></div>
@@ -82,7 +88,7 @@
               <p class="card__text">Швидкісний склад із редстоуновою автоматикою розгону та підсвіченими бортами.</p>
             </div>
           </article>
-          <article class="card glass reveal" data-anim="zoom" data-delay="2">
+          <article class="card glass reveal" data-filter-value="passenger" data-anim="zoom" data-delay="2">
             <div class="card__media">
               <img src="images/train-3.jpg" alt="Тип «Аквамарин» — потяг у стилі Minecraft" loading="lazy" width="800" height="500">
               <div class="card__overlay"><span class="btn btn--sm">51 бл/с</span></div>
@@ -93,7 +99,7 @@
               <p class="card__text">Склад для підводних перегонів Синьої лінії з герметичними дверима та блакитним світлом салону.</p>
             </div>
           </article>
-          <article class="card glass reveal" data-anim="zoom" data-delay="3">
+          <article class="card glass reveal" data-filter-value="passenger" data-anim="zoom" data-delay="3">
             <div class="card__media">
               <img src="images/train-4.jpg" alt="Тип «Смарагд-3» — потяг у стилі Minecraft" loading="lazy" width="800" height="500">
               <div class="card__overlay"><span class="btn btn--sm">63 бл/с</span></div>
@@ -104,7 +110,7 @@
               <p class="card__text">Флагман Смарагдової лінії: панорамні вікна, м'яке зелене освітлення та тиха підвіска.</p>
             </div>
           </article>
-          <article class="card glass reveal" data-anim="zoom" data-delay="0">
+          <article class="card glass reveal" data-filter-value="special" data-anim="zoom" data-delay="0">
             <div class="card__media">
               <img src="images/train-5.jpg" alt="Тип «Мідний Ретро» — потяг у стилі Minecraft" loading="lazy" width="800" height="500">
               <div class="card__overlay"><span class="btn btn--sm">39 бл/с</span></div>
@@ -115,7 +121,7 @@
               <p class="card__text">Історичний склад для ретро-рейсів вихідного дня з окисленою мідною обшивкою.</p>
             </div>
           </article>
-          <article class="card glass reveal" data-anim="zoom" data-delay="1">
+          <article class="card glass reveal" data-filter-value="service" data-anim="zoom" data-delay="1">
             <div class="card__media">
               <img src="images/train-6.jpg" alt="Тип «Незер-Кар» — потяг у стилі Minecraft" loading="lazy" width="800" height="500">
               <div class="card__overlay"><span class="btn btn--sm">72 бл/с</span></div>
@@ -126,7 +132,7 @@
               <p class="card__text">Термостійкий склад для перегонів біля Незер-порталу, обшитий блеквертом та обсидіаном.</p>
             </div>
           </article>
-          <article class="card glass reveal" data-anim="zoom" data-delay="2">
+          <article class="card glass reveal" data-filter-value="passenger" data-anim="zoom" data-delay="2">
             <div class="card__media">
               <img src="images/train-7.jpg" alt="Тип «Золотий Промінь» — потяг у стилі Minecraft" loading="lazy" width="800" height="500">
               <div class="card__overlay"><span class="btn btn--sm">66 бл/с</span></div>
@@ -137,7 +143,7 @@
               <p class="card__text">Найдовший склад мережі із золотою окантовкою та маяковою навігацією.</p>
             </div>
           </article>
-          <article class="card glass reveal" data-anim="zoom" data-delay="3">
+          <article class="card glass reveal" data-filter-value="passenger" data-anim="zoom" data-delay="3">
             <div class="card__media">
               <img src="images/train-8.jpg" alt="Тип «Ехо-Шард» — потяг у стилі Minecraft" loading="lazy" width="800" height="500">
               <div class="card__overlay"><span class="btn btn--sm">78 бл/с</span></div>
@@ -194,5 +200,6 @@
   <script src="js/navigation.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
 </body>
 </html>

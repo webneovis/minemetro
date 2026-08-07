@@ -7,11 +7,23 @@
     if (lightbox) {
       var image = lightbox.querySelector("img");
       var closeBtn = lightbox.querySelector(".lightbox__close");
+      var prevBtn = lightbox.querySelector(".lightbox__nav--prev");
+      var nextBtn = lightbox.querySelector(".lightbox__nav--next");
+      var counter = lightbox.querySelector(".lightbox__counter");
       var thumbs = document.querySelectorAll("[data-lightbox-src]");
+      var current = 0;
 
-      function open(src, alt) {
-        image.setAttribute("src", src);
-        image.setAttribute("alt", alt || "Фото станції");
+      function show(index) {
+        if (!thumbs.length) return;
+        current = (index + thumbs.length) % thumbs.length;
+        var thumb = thumbs[current];
+        image.setAttribute("src", thumb.getAttribute("data-lightbox-src"));
+        image.setAttribute("alt", thumb.getAttribute("data-lightbox-alt") || "Фото станції");
+        if (counter) counter.textContent = (current + 1) + " / " + thumbs.length;
+      }
+
+      function open(index) {
+        show(index);
         lightbox.classList.add("is-open");
         document.body.style.overflow = "hidden";
       }
@@ -21,9 +33,34 @@
         document.body.style.overflow = "";
       }
 
+      function isOpen() {
+        return lightbox.classList.contains("is-open");
+      }
+
       for (var i = 0; i < thumbs.length; i += 1) {
-        thumbs[i].addEventListener("click", function () {
-          open(this.getAttribute("data-lightbox-src"), this.getAttribute("data-lightbox-alt"));
+        (function (index) {
+          thumbs[index].addEventListener("click", function () {
+            open(index);
+          });
+        })(i);
+      }
+
+      if (thumbs.length < 2) {
+        if (prevBtn) prevBtn.hidden = true;
+        if (nextBtn) nextBtn.hidden = true;
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener("click", function (event) {
+          event.stopPropagation();
+          show(current - 1);
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener("click", function (event) {
+          event.stopPropagation();
+          show(current + 1);
         });
       }
 
@@ -32,7 +69,10 @@
         if (event.target === lightbox) close();
       });
       document.addEventListener("keydown", function (event) {
+        if (!isOpen()) return;
         if (event.key === "Escape") close();
+        if (event.key === "ArrowLeft") show(current - 1);
+        if (event.key === "ArrowRight") show(current + 1);
       });
     }
 
@@ -56,3 +96,4 @@
     }
   });
 })();
+

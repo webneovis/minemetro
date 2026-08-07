@@ -1442,6 +1442,65 @@ strong {
   transform: rotate(90deg);
 }
 
+.lightbox__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  border: 1px solid var(--hairline);
+  background: rgba(16, 24, 20, 0.85);
+  color: var(--text);
+  font-size: 1.9rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color var(--t) var(--ease), background var(--t) var(--ease);
+}
+
+.lightbox__nav:hover {
+  border-color: var(--accent);
+  background: rgba(16, 24, 20, 0.95);
+}
+
+.lightbox__nav--prev {
+  left: 24px;
+}
+
+.lightbox__nav--next {
+  right: 24px;
+}
+
+.lightbox__counter {
+  position: absolute;
+  left: 50%;
+  bottom: 26px;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  color: var(--muted, #9fb3ab);
+}
+
+@media (max-width: 720px) {
+  .lightbox__nav {
+    width: 44px;
+    height: 44px;
+    font-size: 1.5rem;
+  }
+
+  .lightbox__nav--prev {
+    left: 10px;
+  }
+
+  .lightbox__nav--next {
+    right: 10px;
+  }
+}
+
 /* ------------------------------------------------------------ фільтри */
 
 .filters {
@@ -1875,6 +1934,9 @@ transform:none;
   border-color: color-mix(in oklab, var(--lc) 55%, transparent);
   box-shadow: 0 0 0 1px color-mix(in oklab, var(--lc) 30%, transparent), var(--sh-3);
 }
+
+
+
 
 
 
