@@ -856,7 +856,7 @@ strong {
     border-color var(--t) var(--ease);
 }
 
-.card::after {
+/*.card::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -865,7 +865,7 @@ strong {
   background: radial-gradient(420px circle at 50% 0%, rgba(47, 224, 160, 0.14), transparent 62%);
   opacity: 0;
   transition: opacity var(--t) var(--ease);
-}
+}*/
 
 .card:hover {
   transform: translateY(-8px) scale(1.012);
@@ -873,15 +873,122 @@ strong {
   box-shadow: var(--sh-glow), var(--sh-3);
 }
 
-.card:hover::after {
+/*.card:hover::after {
   opacity: 1;
-}
+}*/
 
 .card__media {
   position: relative;
   aspect-ratio: 16 / 10;
   overflow: hidden;
   background: #0a100d;
+}
+
+/* ============================================================
+   ПУЛЬСУЮЧИЙ ІНДИКАТОР ЛІНІЇ НА ЗОБРАЖЕННІ СТАНЦІЇ
+   ============================================================ */
+
+.card {
+  --station-color: var(--accent);
+}
+
+/* Колір визначається існуючим data-filter-value */
+.card[data-filter-value="red"] {
+  --station-color: var(--l-red);
+}
+
+.card[data-filter-value="blue"] {
+  --station-color: var(--l-blue);
+}
+
+.card[data-filter-value="green"] {
+  --station-color: var(--l-green);
+}
+
+.card[data-filter-value="yellow"] {
+  --station-color: var(--l-yellow);
+}
+
+.card[data-filter-value="purple"] {
+  --station-color: var(--l-purple);
+}
+
+
+/* Сам кружечок */
+.card[data-filter-value="red"] .card__media::before,
+.card[data-filter-value="blue"] .card__media::before,
+.card[data-filter-value="green"] .card__media::before,
+.card[data-filter-value="yellow"] .card__media::before,
+.card[data-filter-value="purple"] .card__media::before {
+  content: "";
+  position: absolute;
+
+  top: 22px;
+  left: 24px;
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: var(--station-color);
+
+  z-index: 5;
+  pointer-events: none;
+
+  animation: stationPulse 2.2s ease-out infinite;
+}
+
+/* Пульсація */
+@keyframes stationPulse {
+
+  0% {
+    transform: scale(1);
+
+    box-shadow:
+      0 0 0 0 color-mix(
+        in srgb,
+        var(--station-color) 70%,
+        transparent
+      ),
+      0 0 7px color-mix(
+        in srgb,
+        var(--station-color) 90%,
+        transparent
+      );
+  }
+
+  60% {
+    transform: scale(1.04);
+
+    box-shadow:
+      0 0 0 7px color-mix(
+        in srgb,
+        var(--station-color) 0%,
+        transparent
+      ),
+      0 0 14px color-mix(
+        in srgb,
+        var(--station-color) 40%,
+        transparent
+      );
+  }
+
+  100% {
+    transform: scale(1);
+
+    box-shadow:
+      0 0 0 10px color-mix(
+        in srgb,
+        var(--station-color) 0%,
+        transparent
+      ),
+      0 0 7px color-mix(
+        in srgb,
+        var(--station-color) 15%,
+        transparent
+      );
+  }
 }
 
 .card__media img {
@@ -896,7 +1003,7 @@ strong {
   filter: brightness(0.6) saturate(1.12);
 }
 
-.card__overlay {
+/*.card__overlay {
   position: absolute;
   inset: 0;
   display: flex;
@@ -909,7 +1016,7 @@ strong {
 
 .card:hover .card__overlay {
   opacity: 1;
-}
+}*/
 
 .card__overlay .btn {
   transform: translateY(8px);
