@@ -384,7 +384,7 @@ strong {
   position: sticky;
   top: 0;
   z-index: 70;
-  background: rgba(7, 11, 10, 0.55);
+  /*background: rgba(7, 11, 10, 0.55);*/
   backdrop-filter: blur(20px) saturate(160%);
   -webkit-backdrop-filter: blur(20px) saturate(160%);
   border-bottom: 1px solid transparent;
@@ -399,10 +399,16 @@ strong {
   from {
     opacity: 0;
     transform: translateY(-100%);
+    /* під час падіння хедера backdrop-фільтр вимкнено: інакше браузер малює
+       його розмиту смугу на місці хедера ще до появи самого меню */
+    backdrop-filter: blur(0px) saturate(100%);
+    -webkit-backdrop-filter: blur(0px) saturate(100%);
   }
   to {
     opacity: 1;
     transform: none;
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
   }
 }
 
