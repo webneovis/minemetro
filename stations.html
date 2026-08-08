@@ -57,7 +57,7 @@
       </div>
     </section>
 
-    <section class="section section--tight">
+    <section class="section section--tight" id="stations-list">
       <div class="wrap">
         <div class="filters reveal">
           <button type="button" class="is-active" data-filter="all">Усі лінії</button>
@@ -721,6 +721,12 @@
           </div>
         </article>
         </div>
+        <nav class="pagination" data-pagination aria-label="Сторінки станцій" hidden>
+          <button class="pagination__btn" type="button" data-page-prev>← Назад</button>
+          <div class="pagination__pages" data-page-list></div>
+          <span class="pagination__info" data-page-info aria-live="polite"></span>
+          <button class="pagination__btn" type="button" data-page-next>Далі →</button>
+        </nav>
       </div>
     </section>
   </main>
