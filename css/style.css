@@ -1136,7 +1136,7 @@ strong {
   display: block;
   width: 100%;
   min-width: 900px;
-  height: auto;
+  /*height: auto;*/
   position: relative;
   height: 1400px;
 }
