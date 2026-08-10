@@ -1138,6 +1138,7 @@ strong {
   min-width: 900px;
   height: auto;
   position: relative;
+  height: 1400px;
 }
 
 .metro-map .map-line {
@@ -1171,7 +1172,7 @@ strong {
   transform-origin: center;
 }
 
-.metro-map .map-station text {
+.metro-map .map-station text, .metro-map .map-depot text {
   font-family: var(--font-body);
   font-size: 12px;
   font-weight: 600;
@@ -1207,6 +1208,27 @@ strong {
   color: #a970ff;
 }
 
+/* Кольори депо */
+
+.metro-map .map-depot.line--red {
+  color: #ff5b52;
+}
+
+.metro-map .map-depot.line--blue {
+  color: #4da3ff;
+}
+
+.metro-map .map-depot.line--green {
+  color: #2fe0a0;
+}
+
+.metro-map .map-depot.line--yellow {
+  color: #ffc83d;
+}
+
+.metro-map .map-depot.line--purple {
+  color: #a970ff;
+}
 
 .metro-map .map-station:hover circle,
 .metro-map .map-station:focus-visible circle {
@@ -1702,7 +1724,7 @@ strong {
 
 /* ===========================================================
    FARES
-=========================================================== */
+========================================================== */
 
 .fare-grid{
     display:grid;
@@ -2075,12 +2097,9 @@ transform:none;
 
 
 
-
-
-
 /* ===========================================================
    PAGINATION (список станцій)
-=========================================================== */
+========================================================== */
 .pagination {
   display: flex;
   flex-wrap: wrap;
