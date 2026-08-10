@@ -53,6 +53,7 @@
 
   .metro-map {
     min-width: 820px;
+    height: 1000px;
   }
 }
 
@@ -113,6 +114,7 @@
 
   .metro-map {
     min-width: 720px;
+    height: 900px;
   }
 
   .metro-map .map-station text {
