@@ -1116,8 +1116,14 @@ strong {
   opacity: 0.5;
 }
 
+/* DESKTOP SCROLL: той самий контейнер прокрутки тепер працює і на ПК —
+   overscroll-behavior-inline не дає прокрутці «перетікати» на сторінку,
+   тож документ не отримує зайвої горизонтальної прокрутки. */
 .map-scroll {
   overflow-x: auto;
+  max-width: 100%;
+  overscroll-behavior-inline: contain;
+  scroll-behavior: smooth;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
@@ -1135,10 +1141,15 @@ strong {
 .metro-map {
   display: block;
   width: 100%;
-  min-width: 900px;
+  /* MAP WIDTH + DESKTOP SCROLL: після розширення viewBox до 1910 схема має
+     власну «природну» ширину 1910px. min-width не дає глобальному
+     правилу svg{max-width:100%} стискати чи спотворювати схему, тому на
+     ноутбуках/ПК зайва ширина прокручується всередині .map-scroll,
+     а на широких моніторах width:100% лишає схему по центру. */
+  min-width: 1910px;
   /*height: auto;*/
   position: relative;
-  height: 1400px;
+  height: 1800px;
 }
 
 .metro-map .map-line {

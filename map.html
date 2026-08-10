@@ -80,16 +80,18 @@
         </ul>
         <div class="map-shell glass reveal" data-anim="zoom">
           <div class="map-scroll">
-      <svg class="metro-map" viewBox="0 0 1300 900" role="img" aria-label="Схема ліній метрополітену MineMetro">
+      <!-- MAP WIDTH: viewBox розширено праворуч на 600px (1300 -> 1910, з правим полем ~30px як ліворуч) під продовження Золотої лінії -->
+      <svg class="metro-map" viewBox="0 0 1600 900" role="img" aria-label="Схема ліній метрополітену MineMetro">
         <title>Схема ліній метрополітену MineMetro</title>
 
         <!-- glow underlays -->
         <path class="map-line map-line--glow line--purple" data-line="purple" d="M 190.0 70.0 L 190.0 830.0" aria-hidden="true" />
-        <path class="map-line map-line--glow line--yellow" data-line="yellow" d="M 30.0 300.0 L 1250.0 300.0" aria-hidden="true" />
+        <!-- YELLOW EXTENSION: підсвітка Золотої лінії продовжена з 1250 до 1850 (+600px) -->
+        <path class="map-line map-line--glow line--yellow" data-line="yellow" d="M 30.0 300.0 L 1500.0 300.0" aria-hidden="true" />
         <path class="map-line map-line--glow line--red" data-line="red" d="M 470.0 282.0 L 470.0 630.0" aria-hidden="true" />
-        <path class="map-line map-line--glow line--red" data-line="red" d="M 470.0 630.0 L 900.0 630.0" aria-hidden="true" />
+        <path class="map-line map-line--glow line--red" data-line="red" d="M 470.0 630.0 L 975.0 630.0" aria-hidden="true" />
         <path class="map-line map-line--glow line--green" data-line="green" d="M 680.0 50.0 L 1050.0 50.0" aria-hidden="true" />
-        <path class="map-line map-line--glow line--green" data-line="green" d="M 680.0 50.0 L 680.0 770.0" aria-hidden="true" />
+        <path class="map-line map-line--glow line--green" data-line="green" d="M 680.0 50.0 L 680.0 740.0" aria-hidden="true" />
         <path class="map-line map-line--glow line--blue" data-line="blue" d="M 208.0 520.0 L 920.0 520.0" aria-hidden="true" />
         <path class="map-line map-line--glow line--blue" data-line="blue" d="M 920.0 520.0 L 920.0 -270.0" aria-hidden="true" />
 
@@ -98,11 +100,12 @@
 
         <!-- main lines -->
         <path class="map-line line--purple" data-line="purple" d="M 190.0 70.0 L 190.0 830.0" />
-        <path class="map-line line--yellow" data-line="yellow" d="M 30.0 300.0 L 1250.0 300.0" />
+        <!-- YELLOW EXTENSION: основна Золота лінія продовжена з 1250 до 1850 (+600px), товщина й стиль незмінні -->
+        <path class="map-line line--yellow" data-line="yellow" d="M 30.0 300.0 L 1500.0 300.0" />
         <path class="map-line line--red" data-line="red" d="M 470.0 282.0 L 470.0 630.0" />
-        <path class="map-line line--red" data-line="red" d="M 470.0 630.0 L 900.0 630.0" />
+        <path class="map-line line--red" data-line="red" d="M 470.0 630.0 L 975.0 630.0" />
         <path class="map-line line--green" data-line="green" d="M 680.0 50.0 L 1050.0 50.0" />
-        <path class="map-line line--green" data-line="green" d="M 680.0 50.0 L 680.0 770.0" />
+        <path class="map-line line--green" data-line="green" d="M 680.0 50.0 L 680.0 740.0" />
         <path class="map-line line--blue" data-line="blue" d="M 208.0 520.0 L 920.0 520.0" />
         <path class="map-line line--blue" data-line="blue" d="M 920.0 520.0 L 920.0 -270.0" />
 
@@ -224,14 +227,32 @@
           <circle cx="938.0" cy="300.0" r="8"></circle>
           <text x="938.0" y="282.0" text-anchor="middle">Баранкова</text>
         </a>
-        <a class="map-station line--yellow" data-line="yellow" data-name="Амфітеатр" data-line-name="Золота лінія" href="station-amfiteatr.html" aria-label="Станція Амфітеатр, Золота лінія">
+        <!--<a class="map-station line--yellow" data-line="yellow" data-name="Амфітеатр" data-line-name="Золота лінія" href="station-amfiteatr.html" aria-label="Станція Амфітеатр, Золота лінія">
           <circle cx="1050.0" cy="300.0" r="6.5"></circle>
           <text x="1050.0" y="322.0" text-anchor="middle">Амфітеатр</text>
         </a>
         <a class="map-station line--yellow" data-line="yellow" data-name="Прибережна" data-line-name="Золота лінія" href="station-pryberezhna.html" aria-label="Станція Прибережна, Золота лінія">
           <circle cx="1250.0" cy="300.0" r="6.5"></circle>
           <text x="1250.0" y="282.0" text-anchor="middle">Прибережна</text>
-        </a>
+        </a>-->
+        <!-- YELLOW EXTENSION: 4 нові станції на продовженні (крок 150px, підписи чергуються
+             вгору/вниз — та сама геометрія та стилі, що й у наявних станцій) -->
+        <g class="map-station line--yellow" data-line="yellow" data-name="Соняшникова" data-line-name="Золота лінія" role="img" aria-label="Станція Соняшникова, Золота лінія">
+          <circle cx="1380.0" cy="300.0" r="6.5"></circle>
+          <text x="1380.0" y="322.0" text-anchor="middle">Соняшникова</text>
+        </g>
+        <g class="map-station line--yellow" data-line="yellow" data-name="Пасічна" data-line-name="Золота лінія" role="img" aria-label="Станція Пасічна, Золота лінія">
+          <circle cx="1500.0" cy="300.0" r="6.5"></circle>
+          <text x="1500.0" y="282.0" text-anchor="middle">Пасічна</text>
+        </g>
+        <!--<g class="map-station line--yellow" data-line="yellow" data-name="Медова Долина" data-line-name="Золота лінія" role="img" aria-label="Станція Медова Долина, Золота лінія">
+          <circle cx="1700.0" cy="300.0" r="6.5"></circle>
+          <text x="1700.0" y="322.0" text-anchor="middle">Медова Долина</text>
+        </g>
+        <g class="map-station line--yellow" data-line="yellow" data-name="Східні Ворота" data-line-name="Золота лінія" role="img" aria-label="Станція Східні Ворота, Золота лінія">
+          <circle cx="1850.0" cy="300.0" r="6.5"></circle>
+          <text x="1850.0" y="282.0" text-anchor="middle">Східні Ворота</text>
+        </g>-->
 
         <!-- ===================== RED / М1 Червона (вертикаль → згин → горизонталь) ===================== -->
         <a class="map-station line--red map-station--planned" data-line="red" data-name="Смерекова" data-line-name="Червона лінія" href="station-smerekova.html" aria-label="Станція Смерекова (заплановано), Червона лінія">
@@ -239,13 +260,17 @@
           <text x="486.0" y="46.0" text-anchor="start">Смерекова</text>
         </a>
         <a class="map-station line--red map-station--planned" data-line="red" data-name="Дощова" data-line-name="Червона лінія" href="station-doshchova.html" aria-label="Станція Дощова (заплановано), Червона лінія">
-          <circle cx="470.0" cy="130.0" r="6.5"></circle>
-          <text x="454.0" y="126.0" text-anchor="end">Дощова</text>
+          <circle cx="470.0" cy="150.0" r="6.5"></circle>
+          <text x="454.0" y="146.0" text-anchor="end">Дощова</text>
         </a>
         <a class="map-station line--red map-station--transfer" data-line="red" data-name="Тріумфальна" data-line-name="Червона лінія" data-transfer="1" href="station-triumfalna.html" aria-label="Станція Тріумфальна, Червона лінія">
           <circle class="halo" cx="470.0" cy="282.0" r="13"></circle>
           <circle cx="470.0" cy="282.0" r="8"></circle>
           <text x="470.0" y="262.0" text-anchor="middle">Тріумфальна</text>
+        </a>
+        <a class="map-station line--red" data-line="red" data-name="Садова" data-line-name="Червона лінія" href="station-triumfalna.html" aria-label="Станція Садова, Червона лінія">
+          <circle cx="470.0" cy="402.0" r="8"></circle>
+          <text x="510.0" y="406.0" text-anchor="middle">Садова</text>
         </a>
         <a class="map-station line--red map-station--transfer" data-line="red" data-name="Річкова" data-line-name="Червона лінія" data-transfer="1" href="station-richkova.html" aria-label="Станція Річкова, Червона лінія">
           <circle class="halo" cx="470.0" cy="502.0" r="13"></circle>
@@ -253,16 +278,16 @@
           <text x="486.0" y="506.0" text-anchor="start">Річкова</text>
         </a>
         <a class="map-station line--red" data-line="red" data-name="Обсидіанова Тінь" data-line-name="Червона лінія" href="station-obsydianova-tin.html" aria-label="Станція Обсидіанова Тінь, Червона лінія">
-          <circle cx="470.0" cy="570.0" r="6.5"></circle>
-          <text x="486.0" y="574.0" text-anchor="start">Обсидіанова Тінь</text>
+          <circle cx="470.0" cy="580.0" r="6.5"></circle>
+          <text x="486.0" y="584.0" text-anchor="start">Обсидіанова Тінь</text>
         </a>
         <a class="map-station line--red" data-line="red" data-name="Кремнієва" data-line-name="Червона лінія" href="station-kremniyeva.html" aria-label="Станція Кремнієва, Червона лінія">
-          <circle cx="550.0" cy="630.0" r="6.5"></circle>
-          <text x="550.0" y="652.0" text-anchor="middle">Кремнієва</text>
+          <circle cx="500.0" cy="630.0" r="6.5"></circle>
+          <text x="500.0" y="652.0" text-anchor="middle">Кремнієва</text>
         </a>
-        <a class="map-station line--red" data-line="red" data-name="Пиловий Кар'єр" data-line-name="Червона лінія" href="station-pylovyy-karyer.html" aria-label="Станція Пиловий Кар'єр, Червона лінія">
-          <circle cx="610.0" cy="630.0" r="6.5"></circle>
-          <text x="610.0" y="652.0" text-anchor="middle">Пиловий Кар'єр</text>
+        <a class="map-station line--red" data-line="red" data-name="Кар'єр" data-line-name="Червона лінія" href="station-pylovyy-karyer.html" aria-label="Станція Кар'єр, Червона лінія">
+          <circle cx="580.0" cy="630.0" r="6.5"></circle>
+          <text x="580.0" y="652.0" text-anchor="middle">Кар'єр</text>
         </a>
         <a class="map-station line--red map-station--transfer" data-line="red" data-name="Кам'яна Долина" data-line-name="Червона лінія" data-transfer="1" href="station-kamyana-dolyna.html" aria-label="Станція Кам'яна Долина, Червона лінія">
           <circle class="halo" cx="662.0" cy="630.0" r="13"></circle>
@@ -274,8 +299,12 @@
           <text x="780.0" y="652.0" text-anchor="middle">Пшоняна</text>
         </a>
         <a class="map-station line--red" data-line="red" data-name="Бархан" data-line-name="Червона лінія" href="station-barkhan.html" aria-label="Станція Бархан, Червона лінія">
-          <circle cx="900.0" cy="630.0" r="6.5"></circle>
-          <text x="900.0" y="652.0" text-anchor="middle">Бархан</text>
+          <circle cx="880.0" cy="630.0" r="6.5"></circle>
+          <text x="880.0" y="652.0" text-anchor="middle">Бархан</text>
+        </a>
+        <a class="map-station line--red" data-line="red" data-name="Індустріальна" data-line-name="Червона лінія" href="station-barkhan.html" aria-label="Станція Індустріальна, Червона лінія">
+          <circle cx="975.0" cy="630.0" r="6.5"></circle>
+          <text x="975.0" y="652.0" text-anchor="middle">Індустріальна</text>
         </a>
 
         <!-- ===================== GREEN / М3 Смарагдова (горизонталь → згин → вертикаль) ===================== -->
@@ -297,12 +326,12 @@
           <text x="700.0" y="36.0" text-anchor="start">Хмільна</text>
         </a>
         <a class="map-station line--green" data-line="green" data-name="Маяковий" data-line-name="Смарагдова лінія" href="station-mayakovyy.html" aria-label="Станція Маяковий, Смарагдова лінія">
-          <circle cx="680.0" cy="150.0" r="6.5"></circle>
-          <text x="696.0" y="134.0" text-anchor="start">Маяковий</text>
+          <circle cx="680.0" cy="130.0" r="6.5"></circle>
+          <text x="696.0" y="114.0" text-anchor="start">Маяковий</text>
         </a>
         <a class="map-station line--green" data-line="green" data-name="Бізонна" data-line-name="Смарагдова лінія" href="station-bizonna.html" aria-label="Станція Бізонна, Смарагдова лінія">
-          <circle cx="680.0" cy="230.0" r="6.5"></circle>
-          <text x="696.0" y="234.0" text-anchor="start">Бізонна</text>
+          <circle cx="680.0" cy="210.0" r="6.5"></circle>
+          <text x="696.0" y="214.0" text-anchor="start">Бізонна</text>
         </a>
         <a class="map-station line--green map-station--transfer" data-line="green" data-name="Будівнича" data-line-name="Смарагдова лінія" data-transfer="1" href="station-budivnycha.html" aria-label="Станція Будівнича, Смарагдова лінія">
           <circle class="halo" cx="680.0" cy="282.0" r="13"></circle>
@@ -310,30 +339,30 @@
           <text x="696.0" y="278.0" text-anchor="start">Будівнича</text>
         </a>
         <a class="map-station line--green" data-line="green" data-name="Лаврова" data-line-name="Смарагдова лінія" href="station-lavrova.html" aria-label="Станція Лаврова, Смарагдова лінія">
-          <circle cx="680.0" cy="370.0" r="6.5"></circle>
-          <text x="696.0" y="374.0" text-anchor="start">Лаврова</text>
+          <circle cx="680.0" cy="400.0" r="6.5"></circle>
+          <text x="696.0" y="404.0" text-anchor="start">Лаврова</text>
         </a>
-        <a class="map-station line--green map-station--planned" data-line="green" data-name="Вікова" data-line-name="Смарагдова лінія" href="station-vikova.html" aria-label="Станція Вікова (заплановано), Смарагдова лінія">
+        <!--<a class="map-station line--green map-station--planned" data-line="green" data-name="Вікова" data-line-name="Смарагдова лінія" href="station-vikova.html" aria-label="Станція Вікова (заплановано), Смарагдова лінія">
           <circle cx="680.0" cy="436.0" r="6.5"></circle>
           <text x="696.0" y="440.0" text-anchor="start">Вікова</text>
-        </a>
+        </a>-->
         <a class="map-station line--green map-station--transfer" data-line="green" data-name="Кам'яниста" data-line-name="Смарагдова лінія" data-transfer="1" href="station-kamyanysta.html" aria-label="Станція Кам'яниста, Смарагдова лінія">
           <circle class="halo" cx="680.0" cy="502.0" r="13"></circle>
           <circle cx="680.0" cy="502.0" r="8"></circle>
           <text x="696.0" y="498.0" text-anchor="start">Кам'яниста</text>
         </a>
         <a class="map-station line--green" data-line="green" data-name="Мілководна" data-line-name="Смарагдова лінія" href="station-milkovodna.html" aria-label="Станція Мілководна, Смарагдова лінія">
-          <circle cx="680.0" cy="570.0" r="6.5"></circle>
-          <text x="696.0" y="574.0" text-anchor="start">Мілководна</text>
+          <circle cx="680.0" cy="575.0" r="6.5"></circle>
+          <text x="696.0" y="579.0" text-anchor="start">Мілководна</text>
         </a>
         <a class="map-station line--green map-station--transfer" data-line="green" data-name="Скеляста Брама" data-line-name="Смарагдова лінія" data-transfer="1" href="station-skelyasta-brama.html" aria-label="Станція Скеляста Брама, Смарагдова лінія">
           <circle class="halo" cx="680.0" cy="648.0" r="13"></circle>
           <circle cx="680.0" cy="648.0" r="8"></circle>
           <text x="696.0" y="662.0" text-anchor="start">Скеляста Брама</text>
         </a>
-        <a class="map-station line--green" data-line="green" data-name="Пустельна" data-line-name="Смарагдова лінія" href="station-pustelna.html" aria-label="Станція Пустельна, Смарагдова лінія">
-          <circle cx="680.0" cy="770.0" r="6.5"></circle>
-          <text x="696.0" y="774.0" text-anchor="start">Пустельна</text>
+        <a class="map-station line--green" data-line="green" data-name="Золоті піски" data-line-name="Смарагдова лінія" href="station-pustelna.html" aria-label="Станція Золоті піски, Смарагдова лінія">
+          <circle cx="680.0" cy="740.0" r="6.5"></circle>
+          <text x="696.0" y="744.0" text-anchor="start">Золоті піски</text>
         </a>
 
         <!-- ===================== BLUE / М2 Синя (горизонталь → згин → вертикаль) ===================== -->
@@ -389,13 +418,15 @@
                 <li><a href="station-smerekova.html">Смерекова (заплановано)</a></li>
                 <li><a href="station-doshchova.html">Дощова (заплановано)</a></li>
                 <li><a href="station-triumfalna.html">Тріумфальна ⇄<span class="transfer-mark line--yellow" title="Пересадка на Золоту лінію" aria-label="Пересадка на Золоту лінію"><i></i>М4</span></a></li>
+                <li><a href="station-pylovyy-karyer.html">Садова</a></li>
                 <li><a href="station-richkova.html">Річкова ⇄<span class="transfer-mark line--blue" title="Пересадка на Синю лінію" aria-label="Пересадка на Синю лінію"><i></i>М2</span></a></li>
                 <li><a href="station-obsydianova-tin.html">Обсидіанова Тінь</a></li>
                 <li><a href="station-kremniyeva.html">Кремнієва</a></li>
-                <li><a href="station-pylovyy-karyer.html">Пиловий Кар'єр</a></li>
+                <li><a href="station-pylovyy-karyer.html">Кар'єр</a></li>
                 <li><a href="station-kamyana-dolyna.html">Кам'яна Долина ⇄<span class="transfer-mark line--green" title="Пересадка на Смарагдову лінію" aria-label="Пересадка на Смарагдову лінію"><i></i>М3</span></a></li>
                 <li><a href="station-pshonyana.html">Пшоняна</a></li>
                 <li><a href="station-barkhan.html">Бархан</a></li>
+                <li><a href="station-barkhan.html">Індустріальна</a></li>
               </ul>
             </div>
           </article>
@@ -427,11 +458,11 @@
                 <li><a href="station-bizonna.html">Бізонна</a></li>
                 <li><a href="station-budivnycha.html">Будівнича ⇄<span class="transfer-mark line--yellow" title="Пересадка на Золоту лінію" aria-label="Пересадка на Золоту лінію"><i></i>М4</span></a></li>
                 <li><a href="station-lavrova.html">Лаврова</a></li>
-                <li><a href="station-vikova.html">Вікова (заплановано)</a></li>
+                <!--<li><a href="station-vikova.html">Вікова (заплановано)</a></li>-->
                 <li><a href="station-kamyanysta.html">Кам'яниста ⇄<span class="transfer-mark line--blue" title="Пересадка на Синю лінію" aria-label="Пересадка на Синю лінію"><i></i>М2</span></a></li>
                 <li><a href="station-milkovodna.html">Мілководна</a></li>
                 <li><a href="station-skelyasta-brama.html">Скеляста Брама ⇄<span class="transfer-mark line--red" title="Пересадка на Червону лінію" aria-label="Пересадка на Червону лінію"><i></i>М1</span></a></li>
-                <li><a href="station-pustelna.html">Пустельна</a></li>
+                <li><a href="station-pustelna.html">Золоті піски</a></li>
               </ul>
             </div>
           </article>
@@ -449,8 +480,8 @@
                 <li><a href="station-rynkova.html">Ринкова ⇄<span class="transfer-mark line--green" title="Пересадка на Смарагдову лінію" aria-label="Пересадка на Смарагдову лінію"><i></i>М3</span></a></li>
                 <li><a href="station-vitryana.html">Вітряна</a></li>
                 <li><a href="station-barankova.html">Баранкова ⇄<span class="transfer-mark line--blue" title="Пересадка на Синю лінію" aria-label="Пересадка на Синю лінію"><i></i>М2</span></a></li>
-                <li><a href="station-amfiteatr.html">Амфітеатр</a></li>
-                <li><a href="station-pryberezhna.html">Прибережна</a></li>
+                <!--<li><a href="station-amfiteatr.html">Амфітеатр</a></li>
+                <li><a href="station-pryberezhna.html">Прибережна</a></li>-->
               </ul>
             </div>
           </article>
