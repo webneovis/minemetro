@@ -147,7 +147,7 @@ h6 {
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.1;
-  margin: 0 0 0.55em;
+  margin: 0 0 0.35em;
   color: var(--text);
   text-wrap: balance;
 }
@@ -2016,6 +2016,44 @@ transform:none;
 .footer__bottom p {
   margin: 0;
   color: inherit;
+}
+
+/* -------------------------------------- соцмережі (футер / сторінка контактів) */
+
+.social-list {
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 15px;
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 999px;
+  color: var(--text-dim);
+  font-size: 0.93rem;
+  transition:
+    color var(--t) var(--ease),
+    border-color var(--t) var(--ease),
+    transform var(--t) var(--ease-out);
+}
+
+.social-link svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+
+.social-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-2px);
 }
 
 /* --------------------------------------------------- плаваючі елементи */
