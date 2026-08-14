@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>MineMetro — Графіки руху поїздів</title>
+
+  <meta
+    name="description"
+    content="Графіки руху поїздів на п'яти лініях метрополітену MineMetro."
+  >
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MineMetro — Графіки руху поїздів">
+  <meta
+    property="og:description"
+    content="Розклад та інтервали руху поїздів на лініях MineMetro."
+  >
+  <meta property="og:image" content="images/hero.jpg">
+  <meta property="og:site_name" content="MineMetro">
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+  >
+
+  <meta name="theme-color" content="#070b0a">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+  <div class="page-progress" aria-hidden="true"></div>
+
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+
+    <span class="header__line" aria-hidden="true"></span>
+
+    <div class="wrap">
+
+      <nav class="nav" aria-label="Головна навігація">
+
+        <a class="brand" href="index.html">
+
+          <span class="brand__mark" aria-hidden="true">
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="color:#2fe0a0">
+
+              <rect x="4" y="3" width="16" height="13" rx="3"></rect>
+              <path d="M4 10h16"></path>
+              <path d="M8.5 13.2h.01"></path>
+              <path d="M15.5 13.2h.01"></path>
+              <path d="M7 16l-2.4 4.5"></path>
+              <path d="M17 16l2.4 4.5"></path>
+
+            </svg>
+
+          </span>
+
+          <span class="brand__text">
+            MineMetro
+            <span>Metro Network</span>
+          </span>
+
+        </a>
+
+
+        <button
+          class="nav__burger"
+          type="button"
+          aria-label="Відкрити меню"
+          aria-expanded="false"
+          aria-controls="main-menu">
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+        </button>
+
+
+        <div class="nav__menu" id="main-menu">
+
+          <ul class="nav__list">
+
+            <li>
+              <a class="nav__link" href="index.html">
+                Головна
+              </a>
+            </li>
+
+            <li>
+              <a class="nav__link" href="map.html">
+                Схема метро
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="nav__link"
+                href="stations.html"
+                data-match="station-">
+                Станції
+              </a>
+            </li>
+
+            <li>
+              <a class="nav__link" href="trains.html">
+                Поїзди
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="nav__link"
+                href="news.html"
+                data-match="news-">
+                Новини
+              </a>
+            </li>
+
+            <li>
+              <a class="nav__link" href="contacts.html">
+                Контакти
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <div class="nav-scrim" aria-hidden="true"></div>
+
+
+  <main>
+
+
+    <!-- HERO -->
+
+    <section class="page-hero">
+
+      <span class="page-hero__glow" aria-hidden="true"></span>
+
+      <div class="wrap">
+
+        <p class="breadcrumbs">
+          <a href="index.html">Головна</a>
+          →
+          Графіки руху поїздів
+        </p>
+
+        <h1 class="reveal">
+          Графіки руху поїздів
+        </h1>
+
+        <p
+          class="section__lead reveal"
+          data-delay="1">
+
+          Розклад та інтервали руху поїздів
+          на всіх лініях мережі MineMetro.
+
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- TIMETABLE -->
+
+    <section class="section timetable-section">
+
+      <div class="wrap">
+
+
+        <div class="section__label">
+          Розклад MineMetro
+        </div>
+
+        <h2>
+          Рух поїздів
+        </h2>
+
+        <p class="section__lead timetable-intro">
+
+          Поїзди MineMetro працюють протягом усього дня.
+          Інтервал між поїздами залежить від лінії та часу доби.
+
+        </p>
+
+
+        <!-- GENERAL INFO -->
+
+        <div class="timetable-info-grid">
+
+
+          <div class="timetable-info-card stone glass">
+
+            <span class="timetable-info-card__label">
+              РЕЖИМ РОБОТИ
+            </span>
+
+            <strong>
+              05:30 — 00:30
+            </strong>
+
+            <span>
+              щодня
+            </span>
+
+          </div>
+
+
+          <div class="timetable-info-card stone glass">
+
+            <span class="timetable-info-card__label">
+              МІНІМАЛЬНИЙ ІНТЕРВАЛ
+            </span>
+
+            <strong>
+              3–4 хв
+            </strong>
+
+            <span>
+              у години пік
+            </span>
+
+          </div>
+
+
+          <div class="timetable-info-card stone glass">
+
+            <span class="timetable-info-card__label">
+              5 ЛІНІЙ
+            </span>
+
+            <strong>
+              60+
+            </strong>
+
+            <span>
+              станцій мережі
+            </span>
+
+          </div>
+
+
+        </div>
+
+
+        <!-- =========================
+             M1 RED
+             ========================= -->
+
+        <article
+          class="line-timetable line-timetable--red stone glass"
+          id="line-m1">
+
+          <div class="line-timetable__header">
+
+            <div class="line-title">
+
+              <span class="line-dot"></span>
+
+              <div>
+                <span class="line-code">
+                  M1
+                </span>
+
+                <h3>
+                  Червона лінія
+                </h3>
+              </div>
+
+            </div>
+
+
+            <div class="line-status">
+              <span class="status-dot"></span>
+              Рух здійснюється
+            </div>
+
+          </div>
+
+
+          <div class="line-timetable__body">
+
+            <div class="direction">
+
+              <div class="direction__header">
+
+                <span>
+                  НАПРЯМОК
+                </span>
+
+                <strong>
+                  Обидва напрямки
+                </strong>
+
+              </div>
+
+              <div class="schedule-row">
+
+                <span>05:30–07:00</span>
+                <strong>7–8 хв</strong>
+                <span>ранковий графік</span>
+
+              </div>
+
+              <div class="schedule-row schedule-row--peak">
+
+                <span>07:00–10:00</span>
+                <strong>3–4 хв</strong>
+                <span>година пік</span>
+
+              </div>
+
+              <div class="schedule-row">
+
+                <span>10:00–16:00</span>
+                <strong>5–6 хв</strong>
+                <span>денний графік</span>
+
+              </div>
+
+              <div class="schedule-row schedule-row--peak">
+
+                <span>16:00–20:00</span>
+                <strong>3–4 хв</strong>
+                <span>година пік</span>
+
+              </div>
+
+              <div class="schedule-row">
+
+                <span>20:00–00:30</span>
+                <strong>6–8 хв</strong>
+                <span>вечірній графік</span>
+
+              </div>
+
+            </div>
+
+
+            <div class="line-meta">
+
+              <div>
+                <span>Перший поїзд</span>
+                <strong>05:30</strong>
+              </div>
+
+              <div>
+                <span>Останній поїзд</span>
+                <strong>00:30</strong>
+              </div>
+
+              <div>
+                <span>Інтервал у пік</span>
+                <strong>3–4 хв</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- =========================
+             M2 BLUE
+             ========================= -->
+
+        <article
+          class="line-timetable line-timetable--blue stone glass"
+          id="line-m2">
+
+          <div class="line-timetable__header">
+
+            <div class="line-title">
+
+              <span class="line-dot"></span>
+
+              <div>
+
+                <span class="line-code">
+                  M2
+                </span>
+
+                <h3>
+                  Синя лінія
+                </h3>
+
+              </div>
+
+            </div>
+
+
+            <div class="line-status">
+
+              <span class="status-dot"></span>
+
+              Рух здійснюється
+
+            </div>
+
+          </div>
+
+
+          <div class="line-timetable__body">
+
+            <div class="direction">
+
+              <div class="direction__header">
+
+                <span>
+                  НАПРЯМОК
+                </span>
+
+                <strong>
+                  Обидва напрямки
+                </strong>
+
+              </div>
+
+
+              <div class="schedule-row">
+
+                <span>05:30–07:00</span>
+                <strong>8–9 хв</strong>
+                <span>ранковий графік</span>
+
+              </div>
+
+
+              <div class="schedule-row schedule-row--peak">
+
+                <span>07:00–10:00</span>
+                <strong>4–5 хв</strong>
+                <span>година пік</span>
+
+              </div>
+
+
+              <div class="schedule-row">
+
+                <span>10:00–16:00</span>
+                <strong>6–7 хв</strong>
+                <span>денний графік</span>
+
+              </div>
+
+
+              <div class="schedule-row schedule-row--peak">
+
+                <span>16:00–20:00</span>
+                <strong>4–5 хв</strong>
+                <span>година пік</span>
+
+              </div>
+
+
+              <div class="schedule-row">
+
+                <span>20:00–00:30</span>
+                <strong>7–9 хв</strong>
+                <span>вечірній графік</span>
+
+              </div>
+
+            </div>
+
+
+            <div class="line-meta">
+
+              <div>
+                <span>Перший поїзд</span>
+                <strong>05:30</strong>
+              </div>
+
+              <div>
+                <span>Останній поїзд</span>
+                <strong>00:30</strong>
+              </div>
+
+              <div>
+                <span>Інтервал у пік</span>
+                <strong>4–5 хв</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- =========================
+             M3 EMERALD
+             ========================= -->
+
+        <article
+          class="line-timetable line-timetable--emerald stone glass"
+          id="line-m3">
+
+          <div class="line-timetable__header">
+
+            <div class="line-title">
+
+              <span class="line-dot"></span>
+
+              <div>
+
+                <span class="line-code">
+                  M3
+                </span>
+
+                <h3>
+                  Смарагдова лінія
+                </h3>
+
+              </div>
+
+            </div>
+
+
+            <div class="line-status">
+
+              <span class="status-dot"></span>
+
+              Рух здійснюється
+
+            </div>
+
+          </div>
+
+
+          <div class="line-timetable__body">
+
+            <div class="direction">
+
+              <div class="direction__header">
+
+                <span>
+                  НАПРЯМОК
+                </span>
+
+                <strong>
+                  Обидва напрямки
+                </strong>
+
+              </div>
+
+
+              <div class="schedule-row">
+
+                <span>05:30–07:00</span>
+                <strong>8–10 хв</strong>
+                <span>ранковий графік</span>
+              </div>
+
+
+              <div class="schedule-row schedule-row--peak">
+
+                <span>07:00–10:00</span>
+                <strong>5–6 хв</strong>
+                <span>година пік</span>
+
+              </div>
+
+
+              <div class="schedule-row">
+
+                <span>10:00–16:00</span>
+                <strong>7–8 хв</strong>
+                <span>денний графік</span>
+
+              </div>
+
+
+              <div class="schedule-row schedule-row--peak">
+
+                <span>16:00–20:00</span>
+                <strong>5–6 хв</strong>
+                <span>година пік</span>
+
+              </div>
+
+
+              <div class="schedule-row">
+
+                <span>20:00–00:30</span>
+                <strong>8–10 хв</strong>
+                <span>вечірній графік</span>
+
+              </div>
+
+            </div>
+
+
+            <div class="line-meta">
+
+              <div>
+                <span>Перший поїзд</span>
+                <strong>05:30</strong>
+              </div>
+
+              <div>
+                <span>Останній поїзд</span>
+                <strong>00:30</strong>
+              </div>
+
+              <div>
+                <span>Інтервал у пік</span>
+                <strong>5–6 хв</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- =========================
+             M4 GOLD
+             ========================= -->
+
+        <article
+          class="line-timetable line-timetable--gold stone glass"
+          id="line-m4">
+
+          <div class="line-timetable__header">
+
+            <div class="line-title">
+
+              <span class="line-dot"></span>
+
+              <div>
+
+                <span class="line-code">
+                  M4
+                </span>
+
+                <h3>
+                  Золота лінія
+                </h3>
+
+              </div>
+
+            </div>
+
+
+            <div class="line-status">
+
+              <span class="status-dot"></span>
+
+              Рух здійснюється
+
+            </div>
+
+          </div>
+
+
+          <div class="line-timetable__body">
+
+            <div class="direction">
+
+              <div class="direction__header">
+
+                <span>
+                  НАПРЯМОК
+                </span>
+
+                <strong>
+                  Обидва напрямки
+                </strong>
+
+              </div>
+
+
+              <div class="schedule-row">
+
+                <span>05:30–07:00</span>
+                <strong>9–10 хв</strong>
+                <span>ранковий графік</span>
+              </div>
+
+
+              <div class="schedule-row schedule-row--peak">
+
+                <span>07:00–10:00</span>
+                <strong>5–6 хв</strong>
+                <span>година пік</span>
+              </div>
+
+
+              <div class="schedule-row">
+
+                <span>10:00–16:00</span>
+                <strong>7–8 хв</strong>
+                <span>денний графік</span>
+              </div>
+
+
+              <div class="schedule-row schedule-row--peak">
+
+                <span>16:00–20:00</span>
+                <strong>5–6 хв</strong>
+                <span>година пік</span>
+              </div>
+
+
+              <div class="schedule-row">
+
+                <span>20:00–00:30</span>
+                <strong>8–10 хв</strong>
+                <span>вечірній графік</span>
+              </div>
+
+            </div>
+
+
+            <div class="line-meta">
+
+              <div>
+                <span>Перший поїзд</span>
+                <strong>05:30</strong>
+              </div>
+
+              <div>
+                <span>Останній поїзд</span>
+                <strong>00:30</strong>
+              </div>
+
+              <div>
+                <span>Інтервал у пік</span>
+                <strong>5–6 хв</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- =========================
+             M5 AMETHYST
+             ========================= -->
+
+        <article
+          class="line-timetable line-timetable--amethyst stone glass"
+          id="line-m5">
+
+          <div class="line-timetable__header">
+
+            <div class="line-title">
+
+              <span class="line-dot"></span>
+
+              <div>
+
+                <span class="line-code">
+                  M5
+                </span>
+
+                <h3>
+                  Аметистова лінія
+                </h3>
+
+              </div>
+
+            </div>
+
+
+            <div class="line-status">
+
+              <span class="status-dot"></span>
+
+              Рух здійснюється
+
+            </div>
+
+          </div>
+
+
+          <div class="line-timetable__body">
+
+            <div class="direction">
+
+              <div class="direction__header">
+
+                <span>
+                  НАПРЯМОК
+                </span>
+
+                <strong>
+                  Обидва напрямки
+                </strong>
+
+              </div>
+
+
+              <div class="schedule-row">
+
+                <span>05:30–07:00</span>
+                <strong>9–11 хв</strong>
+                <span>ранковий графік</span>
+              </div>
+
+
+              <div class="schedule-row schedule-row--peak">
+
+                <span>07:00–10:00</span>
+                <strong>6–7 хв</strong>
+                <span>година пік</span>
+              </div>
+
+
+              <div class="schedule-row">
+
+                <span>10:00–16:00</span>
+                <strong>8–9 хв</strong>
+                <span>денний графік</span>
+              </div>
+
+
+              <div class="schedule-row schedule-row--peak">
+
+                <span>16:00–20:00</span>
+                <strong>6–7 хв</strong>
+                <span>година пік</span>
+              </div>
+
+
+              <div class="schedule-row">
+
+                <span>20:00–00:30</span>
+                <strong>9–11 хв</strong>
+                <span>вечірній графік</span>
+              </div>
+
+            </div>
+
+
+            <div class="line-meta">
+
+              <div>
+                <span>Перший поїзд</span>
+                <strong>05:30</strong>
+              </div>
+
+              <div>
+                <span>Останній поїзд</span>
+                <strong>00:30</strong>
+              </div>
+
+              <div>
+                <span>Інтервал у пік</span>
+                <strong>6–7 хв</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- NOTE -->
+
+        <div class="timetable-note stone glass">
+
+          <span class="timetable-note__icon">
+            i
+          </span>
+
+          <p>
+            Зазначені інтервали є орієнтовними.
+            Фактичний час прибуття поїзда може відрізнятися
+            залежно від ситуації на лінії.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer">
+
+    <div class="wrap">
+
+      <div class="footer__grid">
+
+
+        <div>
+
+          <a class="brand" href="index.html">
+
+            <span class="brand__mark" aria-hidden="true">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                style="color:#2fe0a0">
+
+                <rect x="4" y="3" width="16" height="13" rx="3"></rect>
+                <path d="M4 10h16"></path>
+                <path d="M8.5 13.2h.01"></path>
+                <path d="M15.5 13.2h.01"></path>
+                <path d="M7 16l-2.4 4.5"></path>
+                <path d="M17 16l2.4 4.5"></path>
+
+              </svg>
+
+            </span>
+
+            <span class="brand__text">
+              MineMetro
+              <span>Metro Network</span>
+            </span>
+
+          </a>
+
+
+          <p class="card__text">
+            Підземна транспортна мережа, побудована блок за блоком у світі Minecraft.
+          </p>
+
+
+          <ul class="social-list">
+
+            <li>
+
+              <a
+                class="social-link"
+                href="https://www.instagram.com/mine.metro/"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true">
+
+                  <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <path d="M17.5 6.5h.01"></path>
+
+                </svg>
+
+              </a>
+
+            </li>
+
+
+            <li>
+
+              <a
+                class="social-link"
+                href="https://www.tiktok.com/@mine.metro"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true">
+
+                  <path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84.02-12.07z"></path>
+
+                </svg>
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h2 class="footer__title">
+            Навігація
+          </h2>
+
+          <ul class="footer__list">
+
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="map.html">Схема метро</a></li>
+            <li><a href="stations.html">Станції</a></li>
+            <li><a href="trains.html">Поїзди</a></li>
+            <li><a href="news.html">Новини</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
+
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h2 class="footer__title">
+            Лінії
+          </h2>
+
+          <ul class="footer__list">
+
+            <li><a href="map.html">М1 · Червона лінія</a></li>
+            <li><a href="map.html">М2 · Синя лінія</a></li>
+            <li><a href="map.html">М3 · Смарагдова лінія</a></li>
+            <li><a href="map.html">М4 · Золота лінія</a></li>
+            <li><a href="map.html">М5 · Аметистова лінія</a></li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer__bottom">
+
+        <p>
+          © <span data-current-year>2026</span>
+          MineMetro. Вигаданий проєкт у світі Minecraft.
+        </p>
+
+        <p>
+          Побудовано з
+          <span aria-hidden="true">▣</span>
+          4 820 000 блоків
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <button
+    class="to-top"
+    type="button"
+    aria-label="Повернутися нагору">
+    ↑
+  </button>
+
+
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

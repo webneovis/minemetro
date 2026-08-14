@@ -118,7 +118,7 @@
   /* RESPONSIVE: те саме пропорційне збільшення для смартфонів (720 * 1910/1300) */
   .metro-map {
     min-width: 1060px;
-    height: 1000px;
+    height: 900px;
   }
 
   .metro-map .map-station text {
